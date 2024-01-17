@@ -1,11 +1,9 @@
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
-import aboutImage from "../components/assets/BO.png";
 
 export default function About() {
-  console.log(About);
   return (
-    <Box sx={{ height: "600px", width: "100%" }}>
+    <Box id="about" sx={{ height: "600px", width: "100%", marginLeft: "5em" }}>
       <h1 style={{ marginTop: "100px", marginRight: "100px" }}>About</h1>
       <Paper
         elevation={3}
@@ -19,13 +17,7 @@ export default function About() {
           display: "block",
           marginTop: "100px",
         }}
-      >
-        <img
-          src={aboutImage}
-          alt="about"
-          style={{ width: "100%", height: "100%" }}
-        />
-      </Paper>
+      ></Paper>
     </Box>
   );
 }

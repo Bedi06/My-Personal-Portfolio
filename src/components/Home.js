@@ -5,7 +5,7 @@ import { ThemeProvider } from "@mui/material/styles";
 export default function Home() {
   return (
     <ThemeProvider theme={Theme}>
-      <Box height={"5em"}>
+      <Box id="home" height={"20rem"}>
         <section height={"6em"}>
           <div
             style={{
