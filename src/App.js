@@ -5,7 +5,7 @@ import About from "./components/About.js";
 import Home from "./components/Home.js";
 const App = () => {
   return (
-    <div className="App" sx={{ marginLeft: "5em" }}>
+    <div>
       <Navbar />
       <Home />
       <About />

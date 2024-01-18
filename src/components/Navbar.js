@@ -2,18 +2,9 @@ import React from "react";
 import { Link as MuiLink, animateScroll as scroll } from "react-scroll";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#17A3A3",
-    },
-    secondary: {
-      main: "#a8b2d1",
-    },
-  },
-});
+import { Theme } from "../theme.js";
+import { ThemeProvider } from "@mui/material/styles";
+import bedis from "./assets/logo3.svg";
 
 export default function Navbar() {
   const openPdfInNewTab = () => {
@@ -29,7 +20,7 @@ export default function Navbar() {
   };
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={Theme}>
       <header className="App-header">
         <Box
           sx={{
@@ -40,17 +31,16 @@ export default function Navbar() {
             paddingLeft: "1em",
           }}
         >
-          <h2
+          <img
             className="App-logo"
             alt="logo"
             style={{
               marginRight: 10,
-              color: theme.palette.primary.main,
-              fontWeight: "light",
+              width: "150px",
+              height: "150px",
             }}
-          >
-            BO
-          </h2>
+            src={bedis}
+          />
 
           <Box
             sx={{
@@ -66,11 +56,14 @@ export default function Navbar() {
               style={{
                 marginRight: "1em",
                 textDecoration: "none",
-                color: theme.palette.secondary.main,
                 cursor: "pointer",
+                color: Theme.palette.secondary.main,
+                "&:hover": {
+                  color: Theme.palette.primary.main,
+                },
               }}
             >
-              <span style={{ color: theme.palette.primary.main }}>01.</span>{" "}
+              <span style={{ color: Theme.palette.primary.main }}>01.</span>{" "}
               About
             </MuiLink>
             <MuiLink
@@ -80,11 +73,11 @@ export default function Navbar() {
               style={{
                 marginRight: "1em",
                 textDecoration: "none",
-                color: theme.palette.secondary.main,
+                color: Theme.palette.secondary.main,
                 cursor: "pointer",
               }}
             >
-              <span style={{ color: theme.palette.primary.main }}>02.</span>{" "}
+              <span style={{ color: Theme.palette.primary.main }}>02.</span>{" "}
               Experience
             </MuiLink>
             <MuiLink
@@ -94,11 +87,11 @@ export default function Navbar() {
               style={{
                 marginRight: "1em",
                 textDecoration: "none",
-                color: theme.palette.secondary.main,
+                color: Theme.palette.secondary.main,
                 cursor: "pointer",
               }}
             >
-              <span style={{ color: theme.palette.primary.main }}>03.</span>{" "}
+              <span style={{ color: Theme.palette.primary.main }}>03.</span>{" "}
               Projects
             </MuiLink>
             <MuiLink
@@ -108,19 +101,19 @@ export default function Navbar() {
               style={{
                 marginRight: "3em",
                 textDecoration: "none",
-                color: theme.palette.secondary.main,
+                color: Theme.palette.secondary.main,
                 cursor: "pointer",
               }}
             >
-              <span style={{ color: theme.palette.primary.main }}>04.</span>{" "}
+              <span style={{ color: Theme.palette.primary.main }}>04.</span>{" "}
               Contact
             </MuiLink>
             <Button
               variant="outlined"
               sx={{
                 marginRight: "3em",
-                borderColor: theme.palette.primary.main,
-                color: theme.palette.primary.main,
+                borderColor: Theme.palette.primary.main,
+                color: Theme.palette.primary.main,
               }}
               onClick={openPdfInNewTab}
             >
