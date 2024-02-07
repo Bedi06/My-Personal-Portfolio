@@ -3,13 +3,19 @@ import Navbar from "./components/Navbar.js";
 import Experience from "./components/Experience.js";
 import About from "./components/About.js";
 import Home from "./components/Home.js";
+import Projects from "./components/Projects.js";
+import Contact from "./components/Contact.js";
 const App = () => {
   return (
-    <div>
+    <div className="App">
       <Navbar />
-      <Home />
-      <About />
-      <Experience />
+      <div className="appBody" style={{ margin: "6em" }}>
+        <Home />
+        <About />
+        <Experience />
+        <Projects />
+        <Contact />
+      </div>
     </div>
   );
 };

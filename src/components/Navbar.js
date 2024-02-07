@@ -1,5 +1,5 @@
 import React from "react";
-import { Link as MuiLink, animateScroll as scroll } from "react-scroll";
+import { Link as MuiLink } from "react-scroll";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import { Theme } from "../theme.js";
@@ -12,12 +12,6 @@ export default function Navbar() {
       "https://bedis-portfolio.s3.eu-west-2.amazonaws.com/Bedrije+Omuri+Resume+.pdf";
     window.open(pdfUrl, "_blank");
   };
-  const scrollTo = (elementId) => {
-    scroll.scrollTo(elementId, {
-      smooth: "easeInOutQuart",
-      offset: -50,
-    });
-  };
 
   return (
     <ThemeProvider theme={Theme}>
@@ -29,6 +23,7 @@ export default function Navbar() {
             alignItems: "center",
             backgroundColor: "#063058B",
             paddingLeft: "1em",
+            fontFamily: "monospace",
           }}
         >
           <img

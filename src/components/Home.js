@@ -13,8 +13,8 @@ export default function Home() {
               display: "flex",
               flexDirection: "column",
               justifyContent: "left",
-              marginLeft: "7em",
-              marginRight: "7em",
+              // marginLeft: "7em",
+              // marginRight: "7em",
             }}
           >
             <span

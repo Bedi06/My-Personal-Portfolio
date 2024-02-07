@@ -3,8 +3,16 @@ import Box from "@mui/material/Box";
 
 export default function About() {
   return (
-    <Box id="about" sx={{ height: "60vh", marginLeft: "5em" }}>
-      <h1 style={{ marginTop: "100px", marginRight: "100px" }}>About</h1>
+    <Box id="about" sx={{ height: "60vh" }}>
+      <h1
+        style={{
+          fontFamily: "monospace",
+          marginTop: "100px",
+          marginRight: "100px",
+        }}
+      >
+        01.A bit About me
+      </h1>
       <Paper
         elevation={3}
         style={{
