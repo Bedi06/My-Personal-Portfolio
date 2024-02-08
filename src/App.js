@@ -9,7 +9,10 @@ const App = () => {
   return (
     <div className="App">
       <Navbar />
-      <div className="appBody" style={{ margin: "6em" }}>
+      <div
+        className="appBody"
+        style={{ marginLeft: "6em", marginRight: "6em" }}
+      >
         <Home />
         <About />
         <Experience />

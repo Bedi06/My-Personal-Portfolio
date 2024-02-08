@@ -5,7 +5,7 @@ import { ThemeProvider } from "@mui/material/styles";
 export default function Home() {
   return (
     <ThemeProvider theme={Theme}>
-      <Box id="home" height={"60vh"}>
+      <Box id="home" sx={{ height: "60vh" }}>
         <Box height="40vh">
           <div
             style={{
@@ -13,8 +13,6 @@ export default function Home() {
               display: "flex",
               flexDirection: "column",
               justifyContent: "left",
-              // marginLeft: "7em",
-              // marginRight: "7em",
             }}
           >
             <span
@@ -23,6 +21,8 @@ export default function Home() {
                 fontSize: "20px",
                 fontWeight: "light",
                 wordSpacing: "5px",
+                fontFamily: "monospace",
+                paddingBottom: "1em",
               }}
             >
               Hi, my name is
@@ -34,6 +34,7 @@ export default function Home() {
                 fontSize: "clamp(40px, 8vw, 80px)",
                 fontWeight: "600",
                 margin: 0,
+                fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
               }}
             >
               Bedi Omuri
@@ -43,26 +44,28 @@ export default function Home() {
                 color: Theme.palette.secondary.main,
                 fontSize: "clamp(40px, 8vw, 80px)",
                 fontWeight: "600",
-                margin: 0,
-                lineHeight: 0.9,
+                marginTop: "5px",
+                lineHeight: 1.1,
+                fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
               }}
             >
-              I Code for impactful <br /> simplicity.
+              I enjoy building software solutions.
             </h2>
             <Box
-              sx={{ display: "flex", flexDirection: "column", width: "500px" }}
+              sx={{ display: "flex", flexDirection: "column", width: "75%" }}
             >
               <p
                 style={{
-                  color: Theme.palette.secondary.light,
-                  fontWeight: "light",
-                  fontSize: "18px",
+                  color: Theme.palette.secondary.main,
+                  fontSize: "20px",
+                  fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
+                  marginTop: 0,
                 }}
               >
-                I am a Software Engineer on a misson to elevate my Cloud
-                computing skills. Looking for an opportunity where i can
-                contribute my creativity and my passion for software
-                development!
+                I'm a passionate Software Engineer dedicated to advancing my
+                skills in Cloud computing. Currently seeking opportunities as a
+                Software Engineer or DevOps Engineer to continue my professional
+                growth.
               </p>
             </Box>
           </div>
