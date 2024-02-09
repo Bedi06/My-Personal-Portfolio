@@ -12,6 +12,12 @@ export const Theme = createTheme({
       dark: "#a8b2d1",
     },
   },
+  typography: {
+    button: {
+      textTransform: "none",
+      cursor: "default",
+    },
+  },
   components: {
     MuiLink: {
       styleOverrides: {
