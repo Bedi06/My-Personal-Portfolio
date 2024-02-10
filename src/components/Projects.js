@@ -217,12 +217,18 @@ export default function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src={githubIcon} alt="GitHub" />
+                    <img
+                      src={githubIcon}
+                      alt="GitHub"
+                      sx={{ color: Theme.palette.primary.main }}
+                    />
                   </Link>
                 </IconWrapper>
                 <IconWrapper>
                   <Link
-                    style={{ textDecoration: "none", color: "inherit" }}
+                    style={{
+                      color: Theme.palette.primary.main,
+                    }}
                     href={project.liveview}
                     target="_blank"
                     rel="noopener noreferrer"

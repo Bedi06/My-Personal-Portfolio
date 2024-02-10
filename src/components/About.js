@@ -66,20 +66,18 @@ export default function About() {
               lineHeight: 1.5,
             }}
           >
-            Hi , my name is Bedi and i enjoy building software solutions. My
-            journey into the world of technology began at very young age. I've
-            always been interested in computers and technology. I was the person
-            who people would go if they had issues with their laptops ,devices
-            or apps . This early exposure ignited a profound curiosity and
-            passion for understanding the intricacies of technology and
-            troubleshooting complex issues. Which led me to persue a degree in
-            Information Technology. I've always been a curious learner. And Over
-            time, I honed my skills in software engineering, web development,
-            and database technologies, seeking opportunities to delve deeper
-            into the field. Throughout my professional journey, I've cultivated
-            a strong foundation in developing, testing, and debugging
-            high-performance software solutions. Some of the tools and languages
-            i work include :
+            Hi , my name is Bedi and i enjoy designing and building web
+            applications. My journey into the world of technology began at very
+            young age. I was the person who people would go if they had issues
+            with their laptops ,devices or apps . This early exposure ignited a
+            profound curiosity and passion for understanding the intricacies of
+            technology and troubleshooting complex issues. Which led me to
+            persue a degree in Information Technology. And Over time, I honed my
+            skills in software engineering, web development, and database
+            technologies, seeking opportunities to delve deeper into the field.
+            Throughout my professional journey, I've cultivated a strong
+            foundation in developing, testing, and debugging high-performance
+            web applications. Some of the tools and languages i work with are:
           </section>
           <Grid
             container
