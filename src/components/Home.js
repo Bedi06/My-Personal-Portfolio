@@ -5,7 +5,7 @@ import { ThemeProvider } from "@mui/material/styles";
 export default function Home() {
   return (
     <ThemeProvider theme={Theme}>
-      <Box id="home" sx={{ height: "60vh" }}>
+      <Box id="home" sx={{ height: "60vh", mb: "4em" }}>
         <Box height="40vh">
           <div
             style={{
@@ -45,11 +45,11 @@ export default function Home() {
                 fontSize: "clamp(40px, 8vw, 80px)",
                 fontWeight: "600",
                 marginTop: "5px",
-                lineHeight: 1.1,
+                lineHeight: 0.9,
                 fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
               }}
             >
-              I enjoy building software solutions.
+              I enjoy learning and creating.
             </h2>
             <Box
               sx={{
@@ -61,15 +61,18 @@ export default function Home() {
               <p
                 style={{
                   color: Theme.palette.secondary.main,
-                  fontSize: "16px",
+                  fontSize: "18px",
                   fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
-                  marginTop: 0,
                 }}
               >
-                I'm a passionate Software Engineer dedicated to advancing my
-                skills in Cloud computing. Currently seeking opportunities as a
-                Software Engineer or DevOps Engineer to continue my professional
-                growth.
+                I am an enthusiastic and dedicated Software Engineer with a keen
+                interest in Cloud computing. My commitment revolves around
+                continuously enhancing my skills and knowledge in this
+                ever-evolving domain. I am currently exploring opportunities as
+                both a Software Engineer and DevOps Engineer, aiming to further
+                my career and contribute to impactful projects. I am passionate
+                about innovation and eager to collaborate with teams to drive
+                technological advancements and achieve collective success
               </p>
             </Box>
           </div>

@@ -3,7 +3,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import { ListItem, Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import rightArrow from "./assets/right-arrow.svg";
-import profile from "./assets/profile.png";
+import profile from "./assets/profile.JPG";
 
 export default function About() {
   return (
@@ -18,9 +18,9 @@ export default function About() {
             lg: "100vh",
             xl: "100vh",
           },
-          mt: "4em",
+          mt: "5em",
           pb: "4em",
-          mb: { sx: "16em", sm: "16em", md: "5em", lg: "2em" },
+          mb: { xs: "3em", sm: "16em", md: "5em", lg: "2em" },
         }}
       >
         <Grid
@@ -117,8 +117,8 @@ export default function About() {
             src={profile}
             alt="profile"
             style={{
-              width: "23em",
-              height: "20em",
+              width: "60%",
+              height: "auto",
               mt: {
                 xs: "2em",
                 sm: "3em",

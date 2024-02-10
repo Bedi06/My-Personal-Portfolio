@@ -9,7 +9,7 @@ import projectData from "./projectsData.json";
 import ImageSlider from "./ImageSlider.js";
 
 const ProjectContainer = styled(Box)(({ theme }) => ({
-  marginTop: "4em",
+  marginTop: "3em",
   paddingTop: "3em",
   width: "100%",
 }));
@@ -21,9 +21,6 @@ const Project = styled(Grid)(({ theme }) => ({
   gridTemplateColumns: "repeat(12, 1fr)",
   gridTemplateRows: "repeat(6, 1fr)",
   alignItems: "center",
-  [theme.breakpoints.down("md")]: {
-    marginTop: "5em",
-  },
   [theme.breakpoints.down("md")]: {
     gridTemplateColumns: "repeat(2, 1fr)",
     gridTemplateRows: "repeat(1, 1fr)",
