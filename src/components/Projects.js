@@ -9,43 +9,47 @@ import projectData from "./projectsData.json";
 import ImageSlider from "./ImageSlider.js";
 
 const ProjectContainer = styled(Box)(({ theme }) => ({
-  paddingTop: "4em",
+  marginTop: "4em",
+  paddingTop: "3em",
   width: "100%",
 }));
 
-const Project = styled(Grid)({
+const Project = styled(Grid)(({ theme }) => ({
   margin: "30px",
   display: "grid",
   gridGap: "10px",
   gridTemplateColumns: "repeat(12, 1fr)",
   gridTemplateRows: "repeat(6, 1fr)",
   alignItems: "center",
-  [Theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("md")]: {
+    marginTop: "5em",
+  },
+  [theme.breakpoints.down("md")]: {
     gridTemplateColumns: "repeat(2, 1fr)",
     gridTemplateRows: "repeat(1, 1fr)",
     marginLeft: "3em",
     margin: 0,
     gap: "0.5em",
   },
-});
+}));
 
-const ProjectContent = styled(Box)({
+const ProjectContent = styled(Box)(({ theme }) => ({
   gridColumn: "1 / -1",
   gridRow: "1 / -1",
   padding: "0 25px",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-  [Theme.breakpoints.up("md")]: {
+  [theme.breakpoints.up("md")]: {
     gridColumn: "1/7 ",
   },
-  [Theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("md")]: {
     gridColumn: "1/1",
     gridRow: "1 / 1",
     padding: "0",
   },
   position: "relative",
-});
+}));
 
 const ProjectLabel = styled("div")(({ theme }) => ({
   color: "#64ffda",
@@ -101,20 +105,26 @@ const ProjectDetails = styled(Box)(({ theme }) => ({
       margin: 0,
       color: "#aaa",
       fontFamily: "monospace",
+      [theme.breakpoints.down("sm")]: {
+        "& li": {
+          display: "grid",
+          gridTemplateColumns: "repeat(2, 1fr)",
+        },
+      },
     },
   },
 }));
 
-const ProjectIcons = styled(Box)({
+const ProjectIcons = styled(Box)(({ theme }) => ({
   gridColumn: "7 / -1",
   display: "flex",
   justifyContent: "flex-end",
   alignItems: "center",
-  [Theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("md")]: {
     gridColumn: "1 / 2",
     justifyContent: "flex-end",
   },
-});
+}));
 
 const IconWrapper = styled(Box)({
   marginRight: "10px",
@@ -129,13 +139,13 @@ const ProjectImage = styled(Box)(({ theme }) => ({
   gridColumn: "6 / -1",
   gridRow: "1 / -1",
 
-  [Theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("md")]: {
     gridColumn: "1/2",
     gridRow: "1 / 1",
     opacity: 0.1,
     width: "120%",
   },
-  [Theme.breakpoints.down("xs")]: {
+  [theme.breakpoints.down("xs")]: {
     marginRight: "10px",
     width: "100%",
   },
@@ -160,7 +170,7 @@ export default function Projects() {
             fontWeight: "600",
             fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
             color: Theme.palette.secondary.light,
-            marginTop: "100px",
+            marginTop: "4em",
             marginRight: "100px",
             whiteSpace: "nowrap",
           }}

@@ -50,7 +50,7 @@ export default function Contact() {
             fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
             paddingBottom: "1em",
             textAlign: "center",
-            width: { xs: "60%", md: "70" },
+            width: { xs: "60%", md: "40%", lg: "40%" },
           }}
         >
           Whether you have a project in mind, questions about my projects, or

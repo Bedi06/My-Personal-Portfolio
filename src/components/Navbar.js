@@ -38,8 +38,8 @@ export default function Navbar() {
           justifyContent: "space-between",
           alignItems: "center",
           backgroundColor: "#121b3b",
-          paddingLeft: "2em",
-          paddingRight: "2em",
+          paddingLeft: "0.5em",
+          paddingRight: "0.5em",
           fontFamily: "monospace",
         }}
       >
