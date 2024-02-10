@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Project #1",
+    "title": "The Big Mouth",
+    "description": "Built in collaboration with my team, the Video Streaming platform for The Big House Theater offers users the ability to stream their favorite shows, complemented by an innovative x-ray feature providing real-time details about actors and their roles. The VideoHub component enables seamless video uploads directly from user devices using S3 presigned URLs, with administrators empowered to approve, review, and delete content. My contributions spanned 60% of the backend development and 40% of the frontend, ensuring a comprehensive and user-friendly platform.",
+    "details": ["React", "MUI", "Auth0", "AWS "],
+    "image": [
+      "https://bedis-portfolio.s3.eu-west-2.amazonaws.com/ThebigMouth.png",
+      "https://bedis-portfolio.s3.eu-west-2.amazonaws.com/VideoHub.png",
+      "https://bedis-portfolio.s3.eu-west-2.amazonaws.com/VideoHub2.png",
+      "https://bedis-portfolio.s3.eu-west-2.amazonaws.com/VideoHub3.png"
+    ],
+    "github": "https://github.com/JoeWeate/thebigmouth",
+    "liveview": "https://www.hackyourfuture.co.uk/"
+  },
+  {
+    "name": "Project #2",
+    "title": "Video Recommandations",
+    "description": "A user-friendly platform that lets you securely save, rate, and organize your favorite videos. With advanced search and filtering options, along with seamless integration of Amazon EC2, RDS, PostgreSQL, React, and Bootstrap technologies, managing your video collection has never been easier.",
+    "details": ["API", "React", "Bootstrap", "AWS", "PSQL", "RDS"],
+    "image": [
+      "https://bedis-portfolio.s3.eu-west-2.amazonaws.com/project3.png"
+    ],
+    "github": "https://github.com/Bedi06/Video-Recommandations-App",
+    "liveview": "http://video-recommandations.s3-website.eu-west-2.amazonaws.com/"
+  },
+  {
+    "name": "Project #3",
+    "title": "Countries Explorer",
+    "description": "Countries Explorer is an intuitive app offering country search and filtering by continent. With dark and light mode options, users can easily access detailed country information and flags, all powered by APIs, Bootstrap, and React.",
+    "details": ["API", "React", "Bootstrap"],
+    "image": [
+      "https://bedis-portfolio.s3.eu-west-2.amazonaws.com/project2.png"
+    ],
+    "github": "https://github.com/Bedi06/Countries-Explorer",
+    "liveview": "https://cyf-bedi06-countries-react.netlify.app/"
+  }
+]

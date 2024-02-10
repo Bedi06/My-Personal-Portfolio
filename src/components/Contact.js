@@ -16,8 +16,9 @@ export default function Contact() {
       <Box
         id="contact"
         sx={{
+          width: "100%",
           height: "60vh",
-          paddingTop: "100px",
+          paddingTop: "1.5em",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -49,20 +50,22 @@ export default function Contact() {
             fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
             paddingBottom: "1em",
             textAlign: "center",
+            width: { xs: "60%", md: "70" },
           }}
         >
           Whether you have a project in mind, questions about my projects, or
           just want to chat tech, I'm always eager to engage with fellow
           enthusiasts like you. Drop me a line and let's start the conversation!
         </section>
-        <Grid container spacing={2} justifyContent="center">
+        <Grid container justifyContent="center">
           <Button
             variant="outlined"
             fullWidth
             sx={{
               width: "8em",
               height: "3em",
-              marginTop: "1em",
+              marginTop: "1.5em",
+
               borderColor: Theme.palette.primary.main,
               color: Theme.palette.primary.main,
               fontFamily: "monospace",

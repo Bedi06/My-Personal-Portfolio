@@ -34,12 +34,15 @@ export default function Navbar() {
     <ThemeProvider theme={Theme}>
       <Box
         sx={{
+          top: 0,
+          width: "100%",
+          zIndex: 1000,
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          backgroundColor: "#063058B",
+          backgroundColor: "#121b3b",
           paddingLeft: "2em",
-          paddingRight: "2em",
+          paddingRight: "4em",
           fontFamily: "monospace",
         }}
       >
@@ -54,7 +57,6 @@ export default function Navbar() {
           src={bedis}
         />
 
-        {/* For laptop/desktop view */}
         <Hidden smDown>
           <Box
             sx={{
@@ -96,7 +98,6 @@ export default function Navbar() {
           </Box>
         </Hidden>
 
-        {/* For mobile view */}
         <Hidden mdUp>
           <IconButton
             style={{ color: Theme.palette.primary.main }}
@@ -109,6 +110,12 @@ export default function Navbar() {
             />
           </IconButton>
         </Hidden>
+
+        {/* <Box
+          sx={{
+            height: { xs: "64px", md: "100%", sm: "100%" },
+          }}
+        /> */}
 
         <SwipeableDrawer
           anchor="right"

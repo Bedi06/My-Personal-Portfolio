@@ -52,12 +52,16 @@ export default function Home() {
               I enjoy building software solutions.
             </h2>
             <Box
-              sx={{ display: "flex", flexDirection: "column", width: "75%" }}
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                width: { xs: "90%", md: "65%" },
+              }}
             >
               <p
                 style={{
                   color: Theme.palette.secondary.main,
-                  fontSize: "20px",
+                  fontSize: "16px",
                   fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
                   marginTop: 0,
                 }}

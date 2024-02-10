@@ -1,15 +1,17 @@
 import React from "react";
 import { styled } from "@mui/system";
-import { Grid, Typography, Box, List, ListItem } from "@mui/material";
+import { Grid, Typography, Box, List, ListItem, Link } from "@mui/material";
 import { Theme } from "../theme.js";
 import { ThemeProvider } from "@mui/material/styles";
 import { LaunchOutlined } from "@mui/icons-material";
 import githubIcon from "./assets/githubIcon.svg";
-import MuiImageSlider from "./MuiImageSlider.js";
-const ProjectContainer = styled(Box)({
-  maxWidth: "1000px",
-  margin: "50px auto",
-});
+import projectData from "./projectsData.json";
+import ImageSlider from "./ImageSlider.js";
+
+const ProjectContainer = styled(Box)(({ theme }) => ({
+  paddingTop: "4em",
+  width: "100%",
+}));
 
 const Project = styled(Grid)({
   margin: "30px",
@@ -18,110 +20,100 @@ const Project = styled(Grid)({
   gridTemplateColumns: "repeat(12, 1fr)",
   gridTemplateRows: "repeat(6, 1fr)",
   alignItems: "center",
-  "@media screen and (max-width: 768px)": {
-    alignItems: "flex-start",
+  [Theme.breakpoints.down("md")]: {
+    gridTemplateColumns: "repeat(2, 1fr)",
+    gridTemplateRows: "repeat(1, 1fr)",
+    marginLeft: "3em",
+    margin: 0,
+    gap: "0.5em",
   },
 });
 
 const ProjectContent = styled(Box)({
-  gridColumn: "1 / 7",
+  gridColumn: "1 / -1",
   gridRow: "1 / -1",
-  position: "relative",
-  [Theme.breakpoints.down("xs")]: {
-    gridColumn: "1 / -1",
-    padding: "40px",
+  padding: "0 25px",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  [Theme.breakpoints.up("md")]: {
+    gridColumn: "1/7 ",
   },
+  [Theme.breakpoints.down("md")]: {
+    gridColumn: "1/1",
+    gridRow: "1 / 1",
+    padding: "0",
+  },
+  position: "relative",
 });
 
-const ProjectLabel = styled("div")({
+const ProjectLabel = styled("div")(({ theme }) => ({
   color: "#64ffda",
   fontFamily: "monospace",
-});
+  [theme.breakpoints.down("md")]: {
+    display: "flex",
+    alignText: "left",
+    marginTop: "7em",
+    marginLeft: "1.5em",
+  },
+}));
 
-const ProjectTitle = styled("h4")({
+const ProjectTitle = styled("h4")(({ theme }) => ({
   fontSize: "1.2rem",
-  fontfamily: "Calibre,Inter,San Francisco,SF Pro Text",
+  fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
   margin: "10px 0 30px",
   color: "#eee",
-});
+  [theme.breakpoints.down("md")]: {
+    display: "flex",
+    alignText: "Left",
+    marginTop: "1em",
+    marginLeft: "1em",
+    marginBottom: 0,
+  },
+}));
 
-const ProjectDetails = styled(Box)({
+const ProjectDetails = styled(Box)(({ theme }) => ({
   fontSize: "15px",
   lineHeight: 1.5,
   color: "#aaa",
   "& p": {
-    backgroundColor: "#252525",
     padding: "20px 25px",
-    [Theme.breakpoints.down("xs")]: {
+    backgroundColor: "#112240",
+  },
+  [theme.breakpoints.down("md")]: {
+    "& p": {
       backgroundColor: "transparent",
-      padding: "20px 0",
+      marginTop: "0.5em",
+    },
+  },
+  [theme.breakpoints.down("sm")]: {
+    "& p": {
+      fontSize: "10px",
     },
   },
   "& ul": {
     display: "flex",
     marginTop: "20px",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "4em",
+    },
     "& li": {
       margin: 0,
-      // marginRight: "20px",
-      // marginLeft: "10px",
       color: "#aaa",
       fontFamily: "monospace",
     },
   },
-});
-
-const ProjectImage = styled(Box)({
-  width: "100%",
-  position: "relative",
-  zIndex: -1,
-  backgroundColor: "#64ffda",
-  background: "linear-gradient(0.4turn, #64ffda, #64ff8d)",
-  borderRadius: "2px",
-  gridColumn: "6 / -1",
-  gridRow: "1 / -1",
-  "@media screen and (max-width: 768px)": {
-    height: "100%",
-  },
-  [Theme.breakpoints.down("xs")]: {
-    gridColumn: "1 / -1",
-    opacity: 0.25,
-  },
-  "&:before": {
-    content: '""',
-    position: "absolute",
-    width: "100%",
-    height: "100%",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    zIndex: 3,
-    backgroundColor: "#0a192f",
-    mixBlendMode: "screen",
-    transition: "background-color 0.3s ease",
-  },
-  "& img": {
-    maxWidth: "100%",
-    height: "auto",
-    borderRadius: "2px",
-    position: "relative",
-    mixBlendMode: "multiply",
-    filter: "grayscale(70%) contrast(1)",
-    transition: "filter 0.3s ease",
-  },
-  "&:hover:before": {
-    filter: "grayscale(0)",
-  },
-  "&:hover img": {
-    filter: "grayscale(0)",
-  },
-});
+}));
 
 const ProjectIcons = styled(Box)({
   gridColumn: "7 / -1",
   display: "flex",
   justifyContent: "flex-end",
   alignItems: "center",
+  [Theme.breakpoints.down("md")]: {
+    gridColumn: "1 / 2",
+    justifyContent: "flex-end",
+  },
 });
 
 const IconWrapper = styled(Box)({
@@ -129,6 +121,34 @@ const IconWrapper = styled(Box)({
   cursor: "pointer",
 });
 
+const ProjectImage = styled(Box)(({ theme }) => ({
+  width: "100%",
+  position: "relative",
+  zIndex: -1,
+  borderRadius: "2px",
+  gridColumn: "6 / -1",
+  gridRow: "1 / -1",
+
+  [Theme.breakpoints.down("md")]: {
+    gridColumn: "1/2",
+    gridRow: "1 / 1",
+    opacity: 0.1,
+    width: "120%",
+  },
+  [Theme.breakpoints.down("xs")]: {
+    marginRight: "10px",
+    width: "100%",
+  },
+
+  "& img": {
+    borderRadius: "2px",
+    position: "relative",
+    [theme.breakpoints.down("md")]: {
+      gridColumn: 1 / 2,
+      gridRow: 1 / 1,
+    },
+  },
+}));
 export default function Projects() {
   return (
     <ThemeProvider theme={Theme}>
@@ -137,6 +157,7 @@ export default function Projects() {
           variant="h2"
           fontSize={"2em"}
           style={{
+            fontWeight: "600",
             fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
             color: Theme.palette.secondary.light,
             marginTop: "100px",
@@ -155,7 +176,7 @@ export default function Projects() {
           </span>
           Projects
         </Typography>
-        <Grid container spacing={2}>
+        <Grid container spacing={0}>
           {projectData.map((project, index) => (
             <Project key={index}>
               <ProjectContent>
@@ -177,15 +198,30 @@ export default function Projects() {
                   </List>
                 </ProjectDetails>
               </ProjectContent>
+
               <ProjectImage>
-                <MuiImageSlider images={project.image} />
+                <ImageSlider images={project.image} />
               </ProjectImage>
+
               <ProjectIcons>
                 <IconWrapper>
-                  <img src={githubIcon} alt="github Icon" />
+                  <Link
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={githubIcon} alt="GitHub" />
+                  </Link>
                 </IconWrapper>
                 <IconWrapper>
-                  <LaunchOutlined />
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    href={project.liveview}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <LaunchOutlined />
+                  </Link>
                 </IconWrapper>
               </ProjectIcons>
             </Project>
@@ -195,41 +231,3 @@ export default function Projects() {
     </ThemeProvider>
   );
 }
-
-const projectData = [
-  {
-    name: "Project #1",
-    title: "The Big Mouth",
-    description:
-      "Lorem ipsum dolor amet you probably haven't heard of them bitters selvage listicle heirloom. Locavore kombucha street art ennui 90's, organic food truck hell of seitan skateboard literally hexagon fixie next level. Lomo salvia yuccie hella roof party echo park vegan four dollar toast cred.",
-    details: ["React", "MUI", "Auth0", "AWS"],
-    image: [
-      "https://bedis-portfolio.s3.eu-west-2.amazonaws.com/ThebigMouth.png",
-      "https://bedis-portfolio.s3.eu-west-2.amazonaws.com/VideoHub.png",
-      "https://bedis-portfolio.s3.eu-west-2.amazonaws.com/VideoHub2.png",
-      "https://bedis-portfolio.s3.eu-west-2.amazonaws.com/VideoHub3.png",
-    ],
-    github: "",
-    liveview: "",
-  },
-
-  {
-    name: "Project #2",
-    title: "Project Two",
-    description:
-      "Lorem ipsum dolor amet you probably haven't heard of them bitters selvage listicle heirloom. Locavore kombucha street art ennui 90's, organic food truck hell of seitan skateboard literally hexagon fixie next level. Lomo salvia yuccie hella roof party echo park vegan four dollar toast cred.",
-    details: ["API", "React", "Bootstrap", "AWS"],
-    image: "https://bedis-portfolio.s3.eu-west-2.amazonaws.com/project2.png",
-    liveview: "",
-  },
-  {
-    name: "Project #3",
-    title: "Project Three",
-    description:
-      "Lorem ipsum dolor amet you probably haven't heard of them bitters selvage listicle heirloom. Locavore kombucha street art ennui 90's, organic food truck hell of seitan skateboard literally hexagon fixie next level. Lomo salvia yuccie hella roof party echo park vegan four dollar toast cred.",
-    details: ["Detail A", "Detail B", "Detail C"],
-    image: "https://bedis-portfolio.s3.eu-west-2.amazonaws.com/project3.png",
-    github: "",
-    liveview: "",
-  },
-];
