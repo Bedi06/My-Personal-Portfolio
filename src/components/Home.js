@@ -49,7 +49,7 @@ export default function Home() {
                 fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
               }}
             >
-              I enjoy learning and creating.
+              I enjoy learning and creating web applications.
             </h2>
             <Box
               sx={{
