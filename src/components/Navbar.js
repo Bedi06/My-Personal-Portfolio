@@ -34,15 +34,12 @@ export default function Navbar() {
     <ThemeProvider theme={Theme}>
       <Box
         sx={{
-          top: 0,
-          width: "100%",
-          zIndex: 1000,
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
           backgroundColor: "#121b3b",
           paddingLeft: "2em",
-          paddingRight: "4em",
+          paddingRight: "2em",
           fontFamily: "monospace",
         }}
       >
@@ -110,12 +107,6 @@ export default function Navbar() {
             />
           </IconButton>
         </Hidden>
-
-        {/* <Box
-          sx={{
-            height: { xs: "64px", md: "100%", sm: "100%" },
-          }}
-        /> */}
 
         <SwipeableDrawer
           anchor="right"
