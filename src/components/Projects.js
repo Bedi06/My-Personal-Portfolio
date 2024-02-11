@@ -57,6 +57,10 @@ const ProjectLabel = styled("div")(({ theme }) => ({
     marginTop: "7em",
     marginLeft: "1.5em",
   },
+  [theme.breakpoints.down("sm")]: {
+    display: "flex",
+    alignText: "left",
+  },
 }));
 
 const ProjectTitle = styled("h4")(({ theme }) => ({
@@ -129,10 +133,8 @@ const IconWrapper = styled(Box)({
 });
 
 const ProjectImage = styled(Box)(({ theme }) => ({
-  width: "100%",
-  position: "relative",
   zIndex: -1,
-  borderRadius: "2px",
+
   gridColumn: "6 / -1",
   gridRow: "1 / -1",
 
@@ -144,16 +146,7 @@ const ProjectImage = styled(Box)(({ theme }) => ({
   },
   [theme.breakpoints.down("xs")]: {
     marginRight: "10px",
-    width: "100%",
-  },
-
-  "& img": {
-    borderRadius: "2px",
-    position: "relative",
-    [theme.breakpoints.down("md")]: {
-      gridColumn: 1 / 2,
-      gridRow: 1 / 1,
-    },
+    width: "120%",
   },
 }));
 export default function Projects() {
@@ -190,12 +183,22 @@ export default function Projects() {
                 <ProjectLabel>{project.name}</ProjectLabel>
                 <ProjectTitle>{project.title}</ProjectTitle>
                 <ProjectDetails>
-                  <Typography variant="body2" component="p">
+                  <Typography
+                    variant="body2"
+                    component="p"
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
                     {project.description}
                   </Typography>
                   <List
                     sx={{
                       display: "flex",
+                      alignItems: "center",
+
                       marginTop: "20px",
                     }}
                   >

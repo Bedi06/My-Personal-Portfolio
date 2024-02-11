@@ -1,12 +1,20 @@
-import Box from "@mui/material/Box";
+import { Box, Typography, Grid } from "@mui/material";
 import { Theme } from "../theme.js";
 import { ThemeProvider } from "@mui/material/styles";
 
 export default function Home() {
   return (
     <ThemeProvider theme={Theme}>
-      <Box id="home" sx={{ height: "60vh", mb: "4em" }}>
-        <Box height="40vh">
+      <Grid
+        container
+        item
+        xs={12}
+        id="home"
+        sx={{
+          mb: { sm: "1em", md: "2em", lg: "2em" },
+        }}
+      >
+        <Box>
           <div
             style={{
               marginTop: "100px",
@@ -27,7 +35,8 @@ export default function Home() {
             >
               Hi, my name is
             </span>
-            <h1
+            <Typography
+              variant="h1"
               style={{
                 color: Theme.palette.secondary.light,
                 lineHeight: 1.1,
@@ -37,9 +46,11 @@ export default function Home() {
                 fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
               }}
             >
+              {" "}
               Bedi Omuri
-            </h1>
-            <h2
+            </Typography>
+            <Typography
+              variant="h2"
               style={{
                 color: Theme.palette.secondary.main,
                 fontSize: "clamp(40px, 8vw, 80px)",
@@ -49,17 +60,18 @@ export default function Home() {
                 fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
               }}
             >
-              I enjoy building and designing web applications.
-            </h2>
+              I enjoy web applications.
+            </Typography>
             <Box
               sx={{
                 display: "flex",
                 flexDirection: "column",
-                width: { xs: "90%", md: "65%" },
               }}
             >
-              <p
+              <Typography
+                variant="p"
                 style={{
+                  paddingTop: "1em",
                   color: Theme.palette.secondary.main,
                   fontSize: "18px",
                   fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
@@ -73,11 +85,11 @@ export default function Home() {
                 my career and contribute to impactful projects. I am passionate
                 about innovation and eager to collaborate with teams to drive
                 technological advancements and achieve collective success
-              </p>
+              </Typography>
             </Box>
           </div>
         </Box>
-      </Box>
+      </Grid>
     </ThemeProvider>
   );
 }

@@ -13,21 +13,19 @@ export default function About() {
         id="about"
         sx={{
           height: {
-            sm: "120vh",
-            md: "100vh",
-            lg: "100vh",
-            xl: "100vh",
+            xs: "auto",
+            sm: "auto",
           },
-          mt: "5em",
-          pb: "4em",
-          mb: { xs: "3em", sm: "16em", md: "5em", lg: "2em" },
+          width: "auto",
+          pt: { sm: "1em", md: "5em", lg: "5em" },
+          pb: { xs: "2em", sm: "1em", md: "2em", lg: "2em" },
         }}
       >
         <Grid
           item
-          xs={20}
+          xs={12}
           sm={12}
-          md={6}
+          md={8}
           lg={6}
           sx={{ paddingRight: { xs: 0, md: "2em" } }}
         >
@@ -85,7 +83,7 @@ export default function About() {
             sx={{ mt: "1em", mb: "2em", color: Theme.palette.secondary.main }}
           >
             {skills.map((skill, index) => (
-              <Grid item xs={6} key={index}>
+              <Grid item xs={4} key={index}>
                 <ListItem sx={{ display: "flex", alignItems: "center" }}>
                   <img
                     src={rightArrow}
@@ -104,11 +102,14 @@ export default function About() {
           md={6}
           sx={{
             mt: {
-              xs: "5em",
+              xs: "1em",
               sm: "5em",
               md: "10em",
               lg: "8em",
             },
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           <img
@@ -120,12 +121,11 @@ export default function About() {
               mt: {
                 xs: "2em",
                 sm: "3em",
-                md: "10em",
-                lg: "15em",
               },
+              boxShadow: "5px 5px 5px 5px rgba(0, 0, 0, 0.2)",
               display: "flex",
               justifyContent: "center",
-              alignItems: "center",
+              alignItems: "flex-start",
               borderRadius: "5%",
               transition: "filter 0.3s ease",
               "&:hover": {
@@ -147,6 +147,13 @@ const skills = [
   "PostgreSQL",
   "Git",
   "Docker",
-  "AWS (S3,EC2,RDS,DynamoDB,API Gateway, Lambda,Cloudfront)",
+  "AWS S3",
+  "AWS EC2",
+  "AWS RDS",
+  "DynamoDB",
+  "API Gateway",
+  "Lambda",
+  "Cloudfront",
+
   "Linux",
 ];
