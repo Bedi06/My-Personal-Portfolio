@@ -47,7 +47,6 @@ export default function Home() {
                 fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
               }}
             >
-              {" "}
               Bedi Omuri
             </Typography>
             <Typography
