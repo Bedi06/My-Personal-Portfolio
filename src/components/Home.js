@@ -39,10 +39,11 @@ export default function Home() {
               variant="h1"
               style={{
                 color: Theme.palette.secondary.light,
-                lineHeight: 1.1,
+
                 fontSize: "clamp(40px, 8vw, 80px)",
                 fontWeight: "600",
-                margin: 0,
+                marginTop: "5px",
+                lineHeight: "0.9",
                 fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
               }}
             >
@@ -50,13 +51,13 @@ export default function Home() {
               Bedi Omuri
             </Typography>
             <Typography
-              variant="h2"
+              variant="h3"
               style={{
                 color: Theme.palette.secondary.main,
                 fontSize: "clamp(40px, 8vw, 80px)",
                 fontWeight: "600",
                 marginTop: "5px",
-                lineHeight: 0.9,
+                lineHeight: "1.1",
                 fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
               }}
             >
@@ -77,14 +78,23 @@ export default function Home() {
                   fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
                 }}
               >
-                I am an enthusiastic and dedicated Software Engineer with a keen
-                interest in Cloud computing. My commitment revolves around
-                continuously enhancing my skills and knowledge in this
-                ever-evolving domain. I am currently exploring opportunities as
-                both a Software Engineer and DevOps Engineer, aiming to further
-                my career and contribute to impactful projects. I am passionate
-                about innovation and eager to collaborate with teams to drive
-                technological advancements and achieve collective success
+                I am a Software Engineer with a keen interest in Cloud
+                computing. My commitment revolves around continuously enhancing
+                my skills and knowledge in this ever-evolving domain. I am
+                currently exploring opportunities as both a Software Engineer
+                and DevOps Engineer. Currently going through a cloud journey at{" "}
+                <a
+                  href="https://codeyourfuture.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="CodeYourFuture"
+                  style={{
+                    color: Theme.palette.primary.main,
+                    textDecoration: "none",
+                  }}
+                >
+                  CodeYourFuture .
+                </a>
               </Typography>
             </Box>
           </div>

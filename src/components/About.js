@@ -31,7 +31,7 @@ export default function About() {
         >
           <Typography
             variant="h2"
-            fontSize={"2em"}
+            fontSize={"32px"}
             style={{
               color: Theme.palette.secondary.light,
               marginTop: "1.5em",
@@ -59,23 +59,51 @@ export default function About() {
               marginTop: "2em",
               marginLeft: "2 em",
               color: Theme.palette.secondary.main,
-              fontSize: "16px",
+              fontSize: "20px",
               fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
-              lineHeight: 1.5,
+              lineHeight: 1.3,
             }}
           >
             Hi , my name is Bedi and i enjoy designing and building web
-            applications. My journey into the world of technology began at very
-            young age. I was the person who people would go if they had issues
-            with their laptops ,devices or apps . This early exposure ignited a
-            profound curiosity and passion for understanding the intricacies of
+            applications.
+          </section>{" "}
+          <section
+            style={{
+              display: "flex",
+              width: { xs: "50%", md: "80%" },
+              marginTop: "1em",
+              marginLeft: "2 em",
+              color: Theme.palette.secondary.main,
+              fontSize: "20px",
+              fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
+              lineHeight: 1.3,
+            }}
+          >
+            My journey into the world of technology began at very young age. I
+            was the person who people would go if they had issues with their
+            laptops ,devices or apps . This early exposure ignited a profound
+            curiosity and passion for understanding the intricacies of
             technology and troubleshooting complex issues. Which led me to
-            persue a degree in Information Technology. And Over time, I honed my
-            skills in software engineering, web development, and database
-            technologies, seeking opportunities to delve deeper into the field.
-            Throughout my professional journey, I've cultivated a strong
-            foundation in developing, testing, and debugging high-performance
-            web applications. Some of the tools and languages i work with are:
+            persue a degree in Information Technology.{" "}
+          </section>
+          <section
+            style={{
+              display: "flex",
+              width: { xs: "50%", md: "80%" },
+              marginTop: "1em",
+              marginLeft: "2 em",
+              color: Theme.palette.secondary.main,
+              fontSize: "20px",
+              fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
+              lineHeight: 1.3,
+            }}
+          >
+            Over time, I honed my skills in software engineering, web
+            development, and database technologies, seeking opportunities to
+            delve deeper into the field. Throughout my professional journey,
+            I've cultivated a strong foundation in developing, testing, and
+            debugging high-performance web applications. Some of the tools and
+            languages i work with are:
           </section>
           <Grid
             container
