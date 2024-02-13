@@ -26,7 +26,6 @@ const App = () => {
 
         <AppBody>
           <PopupModal message="Don't judge me ,I'am still a work in progress." />
-          ß
           <Home />
           <About />
           <Projects />
