@@ -61,7 +61,9 @@ export default function Home() {
                 fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
               }}
             >
-              I enjoy designing and building web applications.
+              I enjoy designing {""}
+              <br />
+              and building web applications.
             </Typography>
             <Box
               sx={{
