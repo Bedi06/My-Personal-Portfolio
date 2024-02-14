@@ -177,8 +177,8 @@ export default function Projects() {
               fontWeight: "600",
               fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
               color: Theme.palette.secondary.light,
-              marginTop: "4em",
-              marginRight: "100px",
+              marginTop: "2em",
+              marginLeft: "1.5em",
             }}
           >
             <span

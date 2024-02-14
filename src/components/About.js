@@ -13,6 +13,8 @@ export default function About() {
         container
         id="about"
         sx={{
+          display: "flex",
+          justifyContent: "center",
           height: "100%",
           width: "auto",
           pt: { xs: "4em", sm: "4em", md: "7em", lg: "10rem" },
@@ -24,7 +26,9 @@ export default function About() {
           sm={12}
           md={8}
           lg={6}
-          sx={{ paddingRight: { xs: 0, md: "2em" } }}
+          sx={{
+            paddingLeft: { xs: 0, sm: 0, md: "2em", lg: "5em" },
+          }}
         >
           <div
             style={{
@@ -154,7 +158,7 @@ export default function About() {
             },
             display: "flex",
             alignItems: "flex-start",
-            marginTop: "2em",
+            marginTop: { xs: "1em", md: "2.5em" },
             justifyContent: "center",
           }}
         >
@@ -162,14 +166,14 @@ export default function About() {
             style={{
               position: "relative",
               display: "inline-block",
-              alignItems: "center",
+              paddingLeft: "3em",
             }}
           >
             <div
               style={{
                 position: "absolute",
                 top: "1em",
-                left: "2em",
+                left: "4em",
                 width: "60%",
                 height: "99%",
                 border: "4px solid #17A3A3 ",
