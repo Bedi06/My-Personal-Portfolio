@@ -143,12 +143,12 @@ const ProjectImage = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("md")]: {
     gridColumn: "1/2",
     gridRow: "1 / 1",
-    opacity: 0.1,
+    opacity: 0.3,
     width: "150%",
   },
   [theme.breakpoints.down("sm")]: {
     alignItems: "center",
-    opacity: 0.1,
+    opacity: 0.3,
     width: "140%",
   },
 
