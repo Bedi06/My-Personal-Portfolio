@@ -1,41 +1,50 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
-import { Box } from "@mui/system";
+import { Paper } from "@mui/material";
 
 const ImageSlider = ({ images }) => {
-  if (images.length === 1) {
-    return (
-      <Box>
-        <img
-          src={images[0]}
-          alt="slide 1"
-          style={{ width: "65vh", height: "auto", borderRadius: "1em" }}
-        />
-      </Box>
-    );
-  }
-
   return (
-    <Carousel
-      animation="slide"
-      interval={3500}
-      autoPlay
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      {images.map((imageUrl, index) => (
-        <img
-          key={index}
-          src={imageUrl}
-          alt={`slide ${index + 1}`}
-          style={{ width: "60vh", height: "auto", borderRadius: "2em" }}
-        />
-      ))}
-    </Carousel>
+    <Paper elevation={3} sx={{ backgroundColor: "transparent" }}>
+      {images.length === 1 ? (
+        <div
+          style={{
+            position: "relative",
+            backgroundColor: "transparent",
+          }}
+        >
+          <img
+            src={images[0]}
+            alt="slide 1"
+            style={{ width: "100%", height: "auto" }}
+          />
+        </div>
+      ) : (
+        <Carousel
+          animation="slide"
+          interval={3500}
+          autoPlay
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          {images.map((imageUrl, index) => (
+            <div
+              key={index}
+              style={{ position: "relative", backgroundColor: "transparent" }}
+            >
+              <img
+                src={imageUrl}
+                alt={`slide ${index + 1}`}
+                style={{ width: "100%", height: "auto" }}
+              />
+            </div>
+          ))}
+        </Carousel>
+      )}
+    </Paper>
   );
 };
 

@@ -33,7 +33,7 @@ export default function Contact() {
             marginBottom: 0,
           }}
         >
-          04.Let's Chat!
+          03.Let's Chat!
         </h4>
         <h2
           style={{

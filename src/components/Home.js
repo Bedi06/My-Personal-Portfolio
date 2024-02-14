@@ -11,13 +11,13 @@ export default function Home() {
         xs={12}
         id="home"
         sx={{
-          mb: { sm: "1em", md: "2em", lg: "2em" },
+          mb: { sm: "1em", md: "2em", lg: "5em" },
         }}
       >
         <Box>
           <div
             style={{
-              marginTop: "100px",
+              marginTop: "8em",
               display: "flex",
               flexDirection: "column",
               justifyContent: "left",
@@ -47,7 +47,6 @@ export default function Home() {
                 fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
               }}
             >
-              {" "}
               Bedi Omuri
             </Typography>
             <Typography
@@ -61,20 +60,24 @@ export default function Home() {
                 fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
               }}
             >
-              I enjoy web applications.
+              I enjoy designing and building web applications.
             </Typography>
             <Box
               sx={{
                 display: "flex",
                 flexDirection: "column",
+                justifyContent: "left",
+                width: { xs: "80%", md: "80%" },
               }}
             >
               <Typography
                 variant="p"
                 style={{
                   paddingTop: "1em",
+                  paddingBottom: "4em",
                   color: Theme.palette.secondary.main,
-                  fontSize: "18px",
+                  fontSize: "20px",
+                  lineHeight: 1.3,
                   fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
                 }}
               >

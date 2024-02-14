@@ -4,6 +4,7 @@ import { ListItem, Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import rightArrow from "./assets/right-arrow.svg";
 import profile from "./assets/profile.JPG";
+import { Skeleton } from "@mui/material";
 
 export default function About() {
   return (
@@ -12,13 +13,9 @@ export default function About() {
         container
         id="about"
         sx={{
-          height: {
-            xs: "auto",
-            sm: "auto",
-          },
+          height: "100%",
           width: "auto",
-          pt: { sm: "1em", md: "5em", lg: "5em" },
-          pb: { xs: "2em", sm: "1em", md: "2em", lg: "2em" },
+          pt: { xs: "4em", sm: "4em", md: "7em", lg: "10rem" },
         }}
       >
         <Grid
@@ -29,29 +26,49 @@ export default function About() {
           lg={6}
           sx={{ paddingRight: { xs: 0, md: "2em" } }}
         >
-          <Typography
-            variant="h2"
-            fontSize={"32px"}
+          <div
             style={{
-              color: Theme.palette.secondary.light,
-              marginTop: "1.5em",
-              marginRight: "100px",
-              whiteSpace: "nowrap",
-              fontWeight: "600",
-              fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
+              display: "flex",
+              alignItems: "center",
+              margin: 0,
+              padding: 0,
             }}
           >
-            <span
+            <Typography
+              variant="h2"
+              fontSize={"2em"}
               style={{
-                color: Theme.palette.primary.main,
-                fontSize: "18px",
-                fontFamily: "SF Mono,Fira Code,Fira Mono,Roboto Mono,monospace",
+                fontWeight: "600",
+                fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
+                color: Theme.palette.secondary.light,
+                marginRight: "100px",
+                whiteSpace: "nowrap",
               }}
             >
-              01.
-            </span>
-            About me
-          </Typography>
+              <span
+                style={{
+                  color: Theme.palette.primary.main,
+                  fontSize: "25px",
+                  fontFamily:
+                    "SF Mono,Fira Code,Fira Mono,Roboto Mono,monospace",
+                }}
+              >
+                01.
+              </span>
+              About me
+            </Typography>
+            <Skeleton
+              variant="text"
+              animation="wave"
+              display="inline"
+              width="70%"
+              sx={{
+                fontSize: "1px",
+                margin: 0,
+                backgroundColor: Theme.palette.secondary.light,
+              }}
+            />
+          </div>
           <section
             style={{
               display: "flex",
@@ -100,7 +117,7 @@ export default function About() {
           >
             Over time, I honed my skills in software engineering, web
             development, and database technologies, seeking opportunities to
-            delve deeper into the field. Throughout my professional journey,
+            dwellve deeper into the field. Throughout my professional journey,
             I've cultivated a strong foundation in developing, testing, and
             debugging high-performance web applications. Some of the tools and
             languages i work with are:
@@ -136,31 +153,46 @@ export default function About() {
               lg: "8em",
             },
             display: "flex",
+            alignItems: "flex-start",
+            marginTop: "2em",
             justifyContent: "center",
-            alignItems: "center",
           }}
         >
-          <img
-            src={profile}
-            alt="profile"
+          <div
             style={{
-              width: "60%",
-              height: "auto",
-              mt: {
-                xs: "2em",
-                sm: "3em",
-              },
-              boxShadow: "5px 5px 5px 5px rgba(0, 0, 0, 0.2)",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "flex-start",
-              borderRadius: "5%",
-              transition: "filter 0.3s ease",
-              "&:hover": {
-                filter: `hue-rotate(30deg) saturate(100%)`, // Change color effect on hover
-              },
+              position: "relative",
+              display: "inline-block",
+              alignItems: "center",
             }}
-          />
+          >
+            <div
+              style={{
+                position: "absolute",
+                top: "1em",
+                left: "2em",
+                width: "60%",
+                height: "99%",
+                border: "4px solid #17A3A3 ",
+                transition: "border-color 0.3s ease-in-out",
+                zIndex: -1,
+              }}
+            />
+            <img
+              src={profile}
+              alt="profile"
+              style={{
+                width: "60%",
+                height: "auto",
+                mb: {
+                  xs: "2em",
+                  sm: "3em",
+                  md: "10em",
+                  lg: "12em",
+                },
+                filter: "grayscale(100%)",
+              }}
+            />
+          </div>
         </Grid>
       </Grid>
     </ThemeProvider>

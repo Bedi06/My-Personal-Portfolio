@@ -7,10 +7,9 @@ import { LaunchOutlined } from "@mui/icons-material";
 import githubIcon from "./assets/githubIcon.svg";
 import projectData from "./projectsData.json";
 import ImageSlider from "./ImageSlider.js";
+import { Skeleton } from "@mui/material";
 
 const ProjectContainer = styled(Box)(({ theme }) => ({
-  marginTop: "3em",
-  paddingTop: "3em",
   width: "100%",
 }));
 
@@ -125,6 +124,9 @@ const ProjectIcons = styled(Box)(({ theme }) => ({
     gridColumn: "1 / 2",
     justifyContent: "flex-end",
   },
+  [theme.breakpoints.down("sm")]: {
+    justifyContent: "flex-end",
+  },
 }));
 
 const IconWrapper = styled(Box)({
@@ -134,16 +136,22 @@ const IconWrapper = styled(Box)({
 
 const ProjectImage = styled(Box)(({ theme }) => ({
   zIndex: -1,
-
   gridColumn: "6 / -1",
   gridRow: "1 / -1",
+  backgroundColor: "transparent",
 
   [theme.breakpoints.down("md")]: {
     gridColumn: "1/2",
     gridRow: "1 / 1",
     opacity: 0.1,
-    width: "120%",
+    width: "150%",
   },
+  [theme.breakpoints.down("sm")]: {
+    alignItems: "center",
+    opacity: 0.1,
+    width: "140%",
+  },
+
   [theme.breakpoints.down("xs")]: {
     marginRight: "10px",
     width: "120%",
@@ -153,29 +161,48 @@ export default function Projects() {
   return (
     <ThemeProvider theme={Theme}>
       <ProjectContainer id="projects">
-        <Typography
-          variant="h2"
-          fontSize={"2em"}
+        <div
           style={{
-            fontWeight: "600",
-            fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
-            color: Theme.palette.secondary.light,
-            marginTop: "4em",
-            marginRight: "100px",
-            whiteSpace: "nowrap",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "left",
+            margin: 0,
+            padding: 0,
           }}
         >
-          <span
+          <Typography
+            variant="h2"
+            fontSize={"2em"}
             style={{
-              color: Theme.palette.primary.main,
-              fontSize: "25px",
-              fontFamily: "SF Mono,Fira Code,Fira Mono,Roboto Mono,monospace",
+              fontWeight: "600",
+              fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
+              color: Theme.palette.secondary.light,
+              marginTop: "4em",
+              marginRight: "100px",
             }}
           >
-            03.
-          </span>
-          Projects
-        </Typography>
+            <span
+              style={{
+                color: Theme.palette.primary.main,
+                fontSize: "25px",
+                fontFamily: "SF Mono,Fira Code,Fira Mono,Roboto Mono,monospace",
+              }}
+            >
+              02.
+            </span>
+            Projects
+            <Skeleton
+              variant="text"
+              animation="wave"
+              display="inline"
+              sx={{
+                fontSize: "1px",
+                padding: "1px",
+                backgroundColor: Theme.palette.secondary.light,
+              }}
+            />
+          </Typography>
+        </div>
         <Grid container spacing={0}>
           {projectData.map((project, index) => (
             <Project key={index}>

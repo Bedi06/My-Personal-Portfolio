@@ -40,6 +40,7 @@ export default function Navbar() {
           backgroundColor: "#121b3b",
           paddingLeft: "0.5em",
           paddingRight: "0.5em",
+          height: "80px",
           fontFamily: "monospace",
         }}
       >

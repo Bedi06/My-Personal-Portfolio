@@ -2,7 +2,7 @@
   {
     "name": "Project #1",
     "title": "The Big Mouth",
-    "description": "Built in collaboration with my team, the Video Streaming platform for The Big House Theater offers users the ability to stream their favorite shows, complemented by an innovative x-ray feature providing real-time details about actors and their roles. The VideoHub component enables seamless video uploads directly from user devices using S3 presigned URLs, with administrators empowered to approve, review, and delete content. My contributions spanned 60% of the backend development and 40% of the frontend, ensuring a comprehensive and user-friendly platform.",
+    "description": "The Video Streaming platform  for the The Big House Theater offers users the ability to stream their favorite shows, complemented by an innovative x-ray feature providing real-time details about actors and their roles. The VideoHub component enables seamless video uploads directly from user devices using S3 presigned URLs, with administrators empowered to approve, review, and delete content.",
     "details": ["React", "MUI", "Auth0", "AWS "],
     "image": [
       "https://bedis-portfolio.s3.eu-west-2.amazonaws.com/thebigmouth.png",
