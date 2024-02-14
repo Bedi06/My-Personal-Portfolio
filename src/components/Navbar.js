@@ -38,9 +38,8 @@ export default function Navbar() {
           justifyContent: "space-between",
           alignItems: "center",
           backgroundColor: "#121b3b",
-          paddingLeft: "0.5em",
-          paddingRight: "0.5em",
           height: "80px",
+          paddingRight: "1.5em",
           fontFamily: "monospace",
         }}
       >
@@ -48,9 +47,8 @@ export default function Navbar() {
           className="App-logo"
           alt="logo"
           style={{
-            marginRight: 10,
-            width: "150px",
-            height: "150px",
+            width: "120px",
+            height: "120px",
           }}
           src={bedis}
         />
