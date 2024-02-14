@@ -52,6 +52,7 @@ export default function Home() {
             <Typography
               variant="h3"
               style={{
+                width: { xs: "80%", sm: "80%" },
                 color: Theme.palette.secondary.main,
                 fontSize: "clamp(40px, 8vw, 80px)",
                 fontWeight: "600",
