@@ -25,7 +25,10 @@ const App = () => {
         <Navbar />
 
         <AppBody>
-          <PopupModal message="Don't judge me ,I'am still a work in progress." />
+          <PopupModal
+            message="Don't judge me ! 
+          I'am still a work in progress."
+          />
           <Home />
           <About />
           <Projects />
