@@ -4,12 +4,7 @@
     "title": "The Big Mouth",
     "description": "A Video Streaming platform build for The Big House Theater Company. The platform  offers users the ability to stream their favorite shows, complemented by an innovative x-ray feature providing real-time details about actors and their roles. The VideoHub page enables seamless video uploads directly from user devices using S3 presigned URLs, with administrators empowered to approve, review, and delete content.",
     "details": ["React", "MUI", "Auth0", "AWS "],
-    "image": [
-      "https://bedis-portfolio.s3.eu-west-2.amazonaws.com/thebigmouth.png",
-      "https://bedis-portfolio.s3.eu-west-2.amazonaws.com/formupload+.png",
-      "https://bedis-portfolio.s3.eu-west-2.amazonaws.com/formurl.png",
-      "https://bedis-portfolio.s3.eu-west-2.amazonaws.com/VideoHub.png"
-    ],
+    "image": ["https://bedis-portfolio.s3.eu-west-2.amazonaws.com/latest.png"],
     "github": "https://github.com/JoeWeate/thebigmouth",
     "liveview": "https://www.hackyourfuture.co.uk/"
   },
