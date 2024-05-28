@@ -8,7 +8,6 @@ import { styled } from "@mui/system";
 import { Theme } from "./theme.js";
 import { ThemeProvider } from "@mui/material/styles";
 import Footer from "./components/Footer.js";
-import PopupModal from "./components/PopupModal.js";
 
 const AppBody = styled("div")(({ theme }) => ({
   marginLeft: "6em",
@@ -25,10 +24,6 @@ const App = () => {
         <Navbar />
 
         <AppBody>
-          <PopupModal
-            message="Don't judge me ! 
-          I'am still a work in progress."
-          />
           <Home />
           <About />
           <Projects />
