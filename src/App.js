@@ -25,8 +25,9 @@ const App = () => {
 
         <AppBody>
           <Home />
-          <About />
           <Projects />
+          <About />
+
           <Contact />
           <Footer />
         </AppBody>

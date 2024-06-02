@@ -37,7 +37,7 @@ export default function Navbar() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          backgroundColor: "#121b3b",
+          backgroundColor: "white",
           height: "80px",
           paddingRight: "1.5em",
           fontFamily: "monospace",
