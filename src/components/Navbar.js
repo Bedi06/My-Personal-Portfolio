@@ -24,9 +24,9 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { label: "About", to: "about" },
-    // { label: "Experience", to: "experience" },
+    { label: "Skills", to: "skills" },
     { label: "Projects", to: "projects" },
+    { label: "About", to: "about" },
     { label: "Contact", to: "contact" },
   ];
 
@@ -39,7 +39,7 @@ export default function Navbar() {
           alignItems: "center",
           backgroundColor: "white",
           height: "80px",
-          paddingRight: "1.5em",
+          mr: "4em",
           fontFamily: "monospace",
         }}
       >
@@ -69,15 +69,12 @@ export default function Navbar() {
                 smooth={true}
                 duration={500}
                 style={{
-                  marginRight: "1em",
+                  marginRight: "4em",
                   textDecoration: "none",
-                  color: Theme.palette.secondary.main,
+                  color: "black",
                   cursor: "pointer",
                 }}
               >
-                <span style={{ color: Theme.palette.primary.main }}>
-                  0{index + 1}.
-                </span>{" "}
                 {link.label}
               </MuiLink>
             ))}

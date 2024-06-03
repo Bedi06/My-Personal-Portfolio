@@ -38,7 +38,7 @@ export default function Home() {
             <Typography
               variant="h1"
               style={{
-                color: Theme.palette.secondary.light,
+                color: Theme.palette.primary.main,
 
                 fontSize: "clamp(40px, 8vw, 80px)",
                 fontWeight: "600",
@@ -53,7 +53,7 @@ export default function Home() {
               variant="h3"
               style={{
                 width: { xs: "80%", sm: "80%" },
-                color: Theme.palette.secondary.main,
+                color: "rgb(123 123 123)",
                 fontSize: "clamp(40px, 8vw, 80px)",
                 fontWeight: "600",
                 marginTop: "5px",
@@ -78,7 +78,7 @@ export default function Home() {
                 style={{
                   paddingTop: "1em",
                   paddingBottom: "4em",
-                  color: Theme.palette.secondary.main,
+                  color: "rgb(123 123 123)",
                   fontSize: "20px",
                   lineHeight: 1.3,
                   fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",

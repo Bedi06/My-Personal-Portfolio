@@ -8,6 +8,7 @@ import { styled } from "@mui/system";
 import { Theme } from "./theme.js";
 import { ThemeProvider } from "@mui/material/styles";
 import Footer from "./components/Footer.js";
+import SkillsSection from "./components/SkillsSection/SkillsSection.js";
 
 const AppBody = styled("div")(({ theme }) => ({
   marginLeft: "6em",
@@ -25,6 +26,7 @@ const App = () => {
 
         <AppBody>
           <Home />
+          <SkillsSection />
           <Projects />
           <About />
 
