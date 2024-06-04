@@ -3,8 +3,14 @@ import Link from "@mui/material/Link";
 import githubIcon from "./assets/githubIcon.svg";
 import projectData from "../components/projectsData.json";
 import { LaunchOutlined } from "@mui/icons-material";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { Typography } from "@mui/material";
 
 const Projects = () => {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <div
       id="projects"
@@ -15,9 +21,19 @@ const Projects = () => {
         padding: 1,
       }}
     >
-      <h1 style={{ textAlign: "center", marginTop: "2em" }}>
+      <Typography
+        variant="h3"
+        style={{
+          textAlign: "center",
+          marginTop: "1em",
+          fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
+          fontSize: { xs: "25px", sm: "30px", md: "30px", lg: "35px" },
+          fontWeight: 600,
+          color: "black",
+        }}
+      >
         Feature Projects
-      </h1>
+      </Typography>
       <div
         style={{
           display: "flex",
@@ -28,20 +44,21 @@ const Projects = () => {
           marginBottom: "1.5em",
           backgroundColor: "white",
           color: "black",
-          fontSize: "20px",
+          fontSize: { xs: "14px", sm: "16px", md: "18px" },
+          flexWrap: "wrap",
         }}
       >
         {projectData.map((project, index) => (
           <React.Fragment key={index}>
             <Link
               underline="none"
-              style={{ marginRight: "1em" }}
+              style={{ margin: "0.5em" }}
               href={`#project-${index}`}
             >
               {project.title}
             </Link>
             {index < projectData.length - 1 && (
-              <span style={{ marginRight: "1em" }}>|</span>
+              <span style={{ margin: "0.5em" }}>|</span>
             )}
           </React.Fragment>
         ))}
@@ -60,7 +77,11 @@ const Projects = () => {
             id={`project-${index}`}
             style={{
               display: "flex",
-              flexDirection: index % 2 === 0 ? "row-reverse" : "row",
+              flexDirection: isSmallScreen
+                ? "column"
+                : index % 2 === 0
+                ? "row-reverse"
+                : "row",
               alignItems: "center",
               paddingBottom: "5em",
             }}
@@ -70,8 +91,9 @@ const Projects = () => {
               href={project.github}
               style={{
                 flex: "1",
-                marginRight: index % 2 === 0 ? "0" : "1em",
-                marginLeft: index % 2 === 0 ? "1em" : "0",
+                marginRight: isSmallScreen ? 0 : index % 2 === 0 ? 0 : "1em",
+                marginLeft: isSmallScreen ? 0 : index % 2 === 0 ? "1em" : 0,
+                order: isSmallScreen ? -1 : 0,
               }}
             >
               <img
@@ -80,19 +102,40 @@ const Projects = () => {
                 style={{ width: "100%" }}
               />
             </Link>
-            <div style={{ flex: "1", textAlign: "left" }}>
-              <h2>{project.title}</h2>
-              <p style={{ fontSize: "15px" }}>{project.description}</p>
-              <div>
+            <div style={{ flex: "1", textAlign: "left", padding: "1em" }}>
+              <Typography
+                variant="h5"
+                style={{
+                  fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
+                  fontSize: { xs: "20px", sm: "24px", md: "28px" },
+                  fontWeight: 600,
+                  color: "black",
+                }}
+              >
+                {project.title}
+              </Typography>
+              <Typography
+                style={{
+                  fontSize: { xs: "14px", sm: "15px", md: "16px" },
+                  color: "#555d69",
+                  marginTop: "1em",
+                }}
+              >
+                {project.description}
+              </Typography>
+              <div style={{ marginTop: "1em" }}>
                 {project.details.map((detail, index) => (
                   <span
                     key={index}
                     style={{
+                      color: "#17A3A3",
                       display: "inline-block",
                       margin: "0.5em 0.5em 0 0",
-                      padding: "0.5em",
-
-                      backgroundColor: "#f1f1f1",
+                      padding: "0.3em",
+                      border: "2px solid",
+                      borderRadius: "5px",
+                      borderColor: "#17A3A3",
+                      fontSize: { xs: "12px", sm: "14px", md: "16px" },
                     }}
                   >
                     {detail}
@@ -107,7 +150,6 @@ const Projects = () => {
                 >
                   <img src={githubIcon} alt="GitHub" />
                 </Link>
-
                 <Link
                   style={{
                     color: "black",
@@ -128,4 +170,5 @@ const Projects = () => {
     </div>
   );
 };
+
 export default Projects;

@@ -13,10 +13,11 @@ export default function About() {
         id="about"
         sx={{
           display: "flex",
-          justifyContent: "center",
-          height: "100%",
+          alignItems: "flex-start",
+          minHeight: "60vh",
           width: "auto",
-          pt: { xs: "4em", sm: "4em", md: "7em", lg: "10rem" },
+          pt: { xs: "2em", sm: "2em", md: "3em", lg: "4em" },
+          position: "relative", // For absolute positioning of Skeleton
         }}
       >
         <Grid
@@ -26,7 +27,7 @@ export default function About() {
           md={8}
           lg={6}
           sx={{
-            paddingLeft: { xs: 0, sm: 0, md: "2em", lg: "5em" },
+            paddingBottom: { xs: "2em", sm: "3em", md: "4em", lg: "5em" }, // Add space below text
           }}
         >
           <div
@@ -43,7 +44,7 @@ export default function About() {
               style={{
                 fontWeight: "600",
                 fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
-                color: Theme.palette.secondary.light,
+                color: "black",
                 marginRight: "100px",
                 whiteSpace: "nowrap",
               }}
@@ -64,9 +65,11 @@ export default function About() {
               display="inline"
               width="70%"
               sx={{
-                fontSize: "1px",
+                left: "20%",
+                transform: "translateX(-50%)",
+                fontSize: "2px",
                 margin: 0,
-                backgroundColor: Theme.palette.secondary.light,
+                backgroundColor: " #17A3A3",
               }}
             />
           </div>
@@ -75,8 +78,7 @@ export default function About() {
               display: "flex",
               width: { xs: "50%", md: "80%" },
               marginTop: "2em",
-              marginLeft: "2 em",
-              color: Theme.palette.secondary.main,
+              color: "#555d69",
               fontSize: "20px",
               fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
               lineHeight: 1.3,
@@ -90,8 +92,7 @@ export default function About() {
               display: "flex",
               width: { xs: "50%", md: "80%" },
               marginTop: "1em",
-              marginLeft: "2 em",
-              color: Theme.palette.secondary.main,
+              color: "#555d69",
               fontSize: "20px",
               fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
               lineHeight: 1.3,
@@ -109,8 +110,7 @@ export default function About() {
               display: "flex",
               width: { xs: "50%", md: "80%" },
               marginTop: "1em",
-              marginLeft: "2 em",
-              color: Theme.palette.secondary.main,
+              color: "#555d69",
               fontSize: "20px",
               fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
               lineHeight: 1.3,
@@ -129,16 +129,10 @@ export default function About() {
           xs={12}
           md={6}
           sx={{
-            mt: {
-              xs: "1em",
-              sm: "5em",
-              md: "10em",
-              lg: "8em",
-            },
             display: "flex",
-            alignItems: "flex-start",
-            marginTop: { xs: "1em", md: "2.5em" },
+            alignItems: "center",
             justifyContent: "center",
+            pt: { xs: "2em", sm: "4em", md: "4em", lg: "3em" },
           }}
         >
           <div
@@ -155,9 +149,7 @@ export default function About() {
                 left: "4em",
                 width: "60%",
                 height: "99%",
-                border: "4px solid #17A3A3 ",
-                transition: "border-color 0.3s ease-in-out",
-                zIndex: -1,
+                border: "4px solid #17A3A3",
               }}
             />
             <img
@@ -166,17 +158,24 @@ export default function About() {
               style={{
                 width: "60%",
                 height: "auto",
-                mb: {
-                  xs: "2em",
-                  sm: "3em",
-                  md: "10em",
-                  lg: "12em",
-                },
-                filter: "grayscale(100%)",
+                filter: "grayscale(90%)",
               }}
             />
           </div>
         </Grid>
+        <Skeleton
+          variant="text"
+          animation="wave"
+          width="30%"
+          sx={{
+            fontSize: "2px",
+            backgroundColor: "#17A3A3",
+            position: "absolute",
+            bottom: { xs: "-4rem", sm: "-4rem", md: "-5rem", lg: "-1rem" },
+            left: { xs: "50%", md: "80%" },
+            transform: "translateX(-50%)",
+          }}
+        />
       </Grid>
     </ThemeProvider>
   );
