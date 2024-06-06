@@ -172,7 +172,7 @@ export default function About() {
             backgroundColor: "#17A3A3",
             position: "absolute",
             bottom: { xs: "-4rem", sm: "-4rem", md: "-5rem", lg: "-1rem" },
-            left: { xs: "50%", md: "80%" },
+            left: { xs: "50%", md: "55%" },
             transform: "translateX(-50%)",
           }}
         />

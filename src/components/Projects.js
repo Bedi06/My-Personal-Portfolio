@@ -44,7 +44,6 @@ const Projects = () => {
           marginBottom: "1.5em",
           backgroundColor: "white",
           color: "black",
-          fontSize: { xs: "14px", sm: "16px", md: "18px" },
           flexWrap: "wrap",
         }}
       >
@@ -52,7 +51,9 @@ const Projects = () => {
           <React.Fragment key={index}>
             <Link
               underline="none"
-              style={{ margin: "0.5em" }}
+              style={{
+                margin: "0.5em",
+              }}
               href={`#project-${index}`}
             >
               {project.title}
@@ -135,7 +136,12 @@ const Projects = () => {
                       border: "2px solid",
                       borderRadius: "5px",
                       borderColor: "#17A3A3",
-                      fontSize: { xs: "12px", sm: "14px", md: "16px" },
+                      fontSize: {
+                        xs: "12px",
+                        sm: "14px",
+                        md: "16px",
+                        lg: "20px",
+                      },
                     }}
                   >
                     {detail}

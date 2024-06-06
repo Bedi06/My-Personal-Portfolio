@@ -19,7 +19,7 @@ export default function Navbar() {
 
   const openPdfInNewTab = () => {
     const pdfUrl =
-      "https://bedis-portfolio.s3.eu-west-2.amazonaws.com/Bedrije+Omuri+Resume+.pdf";
+      "https://bedis-portfolio.s3.eu-west-2.amazonaws.com/Bedrije+Omuri.pdf";
     window.open(pdfUrl, "_blank");
   };
 
