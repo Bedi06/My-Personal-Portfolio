@@ -73,27 +73,29 @@ export default function About() {
               }}
             />
           </div>
-          <section
+          <Typography
+            variant="body1"
             style={{
               display: "flex",
               width: { xs: "50%", md: "80%" },
               marginTop: "2em",
               color: "#555d69",
-              fontSize: "20px",
+              fontSize: "16px",
               fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
               lineHeight: 1.3,
             }}
           >
             Hi , my name is Bedi and i enjoy designing and building web
             applications.
-          </section>{" "}
-          <section
+          </Typography>{" "}
+          <Typography
+            variant="body1"
             style={{
               display: "flex",
               width: { xs: "50%", md: "80%" },
-              marginTop: "1em",
+              marginTop: "2em",
               color: "#555d69",
-              fontSize: "20px",
+              fontSize: "16px",
               fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
               lineHeight: 1.3,
             }}
@@ -104,14 +106,15 @@ export default function About() {
             curiosity and passion for understanding the intricacies of
             technology and troubleshooting complex issues. Which led me to
             persue a degree in Information Technology.{" "}
-          </section>
-          <section
+          </Typography>
+          <Typography
+            variant="body1"
             style={{
               display: "flex",
               width: { xs: "50%", md: "80%" },
-              marginTop: "1em",
+              marginTop: "2em",
               color: "#555d69",
-              fontSize: "20px",
+              fontSize: "16px",
               fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
               lineHeight: 1.3,
             }}
@@ -122,7 +125,7 @@ export default function About() {
             I've cultivated a strong foundation in developing, testing, and
             debugging high-performance web applications. Some of the tools and
             languages i work with are:
-          </section>
+          </Typography>
         </Grid>
         <Grid
           item
@@ -132,7 +135,7 @@ export default function About() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            pt: { xs: "2em", sm: "4em", md: "4em", lg: "3em" },
+            pt: { xs: "2em", sm: "4em", md: "4em", lg: "2em" },
           }}
         >
           <div
@@ -156,7 +159,7 @@ export default function About() {
               src={profile}
               alt="profile"
               style={{
-                width: "60%",
+                width: "55%",
                 height: "auto",
                 filter: "grayscale(90%)",
               }}
@@ -171,7 +174,7 @@ export default function About() {
             fontSize: "2px",
             backgroundColor: "#17A3A3",
             position: "absolute",
-            bottom: { xs: "-4rem", sm: "-4rem", md: "-5rem", lg: "-1rem" },
+            bottom: { xs: "-4rem", sm: "-4rem", md: "-5rem", lg: "-3rem" },
             left: { xs: "50%", md: "55%" },
             transform: "translateX(-50%)",
           }}
