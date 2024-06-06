@@ -19,14 +19,14 @@ export default function Navbar() {
 
   const openPdfInNewTab = () => {
     const pdfUrl =
-      "https://bedis-portfolio.s3.eu-west-2.amazonaws.com/Bedrije+Omuri+Resume+.pdf";
+      "https://bedis-portfolio.s3.eu-west-2.amazonaws.com/Bedrije+Omuri.pdf";
     window.open(pdfUrl, "_blank");
   };
 
   const navLinks = [
-    { label: "About", to: "about" },
-    // { label: "Experience", to: "experience" },
+    { label: "Skills", to: "skills" },
     { label: "Projects", to: "projects" },
+    { label: "About", to: "about" },
     { label: "Contact", to: "contact" },
   ];
 
@@ -37,9 +37,9 @@ export default function Navbar() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          backgroundColor: "#121b3b",
+          backgroundColor: "white",
           height: "80px",
-          paddingRight: "1.5em",
+          mr: "4em",
           fontFamily: "monospace",
         }}
       >
@@ -69,15 +69,12 @@ export default function Navbar() {
                 smooth={true}
                 duration={500}
                 style={{
-                  marginRight: "1em",
+                  marginRight: "4em",
                   textDecoration: "none",
-                  color: Theme.palette.secondary.main,
+                  color: "black",
                   cursor: "pointer",
                 }}
               >
-                <span style={{ color: Theme.palette.primary.main }}>
-                  0{index + 1}.
-                </span>{" "}
                 {link.label}
               </MuiLink>
             ))}

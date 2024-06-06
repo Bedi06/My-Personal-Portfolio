@@ -1,10 +1,9 @@
 import { Theme } from "../theme.js";
 import { ThemeProvider } from "@mui/material/styles";
-import { ListItem, Typography } from "@mui/material";
 import { Grid } from "@mui/material";
-import rightArrow from "./assets/right-arrow.svg";
 import profile from "./assets/profile.JPG";
 import { Skeleton } from "@mui/material";
+import { Typography } from "@mui/material";
 
 export default function About() {
   return (
@@ -14,10 +13,11 @@ export default function About() {
         id="about"
         sx={{
           display: "flex",
-          justifyContent: "center",
-          height: "100%",
+          alignItems: "flex-start",
+          minHeight: "60vh",
           width: "auto",
-          pt: { xs: "4em", sm: "4em", md: "7em", lg: "10rem" },
+          pt: { xs: "2em", sm: "2em", md: "3em", lg: "4em" },
+          position: "relative", // For absolute positioning of Skeleton
         }}
       >
         <Grid
@@ -27,7 +27,7 @@ export default function About() {
           md={8}
           lg={6}
           sx={{
-            paddingLeft: { xs: 0, sm: 0, md: "2em", lg: "5em" },
+            paddingBottom: { xs: "2em", sm: "3em", md: "4em", lg: "5em" }, // Add space below text
           }}
         >
           <div
@@ -44,21 +44,19 @@ export default function About() {
               style={{
                 fontWeight: "600",
                 fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
-                color: Theme.palette.secondary.light,
+                color: "black",
                 marginRight: "100px",
                 whiteSpace: "nowrap",
               }}
             >
               <span
                 style={{
-                  color: Theme.palette.primary.main,
+                  color: "rgb(80 82 91)",
                   fontSize: "25px",
                   fontFamily:
                     "SF Mono,Fira Code,Fira Mono,Roboto Mono,monospace",
                 }}
-              >
-                01.
-              </span>
+              ></span>
               About me
             </Typography>
             <Skeleton
@@ -67,9 +65,11 @@ export default function About() {
               display="inline"
               width="70%"
               sx={{
-                fontSize: "1px",
+                left: "20%",
+                transform: "translateX(-50%)",
+                fontSize: "2px",
                 margin: 0,
-                backgroundColor: Theme.palette.secondary.light,
+                backgroundColor: " #17A3A3",
               }}
             />
           </div>
@@ -78,8 +78,7 @@ export default function About() {
               display: "flex",
               width: { xs: "50%", md: "80%" },
               marginTop: "2em",
-              marginLeft: "2 em",
-              color: Theme.palette.secondary.main,
+              color: "#555d69",
               fontSize: "20px",
               fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
               lineHeight: 1.3,
@@ -93,8 +92,7 @@ export default function About() {
               display: "flex",
               width: { xs: "50%", md: "80%" },
               marginTop: "1em",
-              marginLeft: "2 em",
-              color: Theme.palette.secondary.main,
+              color: "#555d69",
               fontSize: "20px",
               fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
               lineHeight: 1.3,
@@ -112,8 +110,7 @@ export default function About() {
               display: "flex",
               width: { xs: "50%", md: "80%" },
               marginTop: "1em",
-              marginLeft: "2 em",
-              color: Theme.palette.secondary.main,
+              color: "#555d69",
               fontSize: "20px",
               fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
               lineHeight: 1.3,
@@ -126,40 +123,16 @@ export default function About() {
             debugging high-performance web applications. Some of the tools and
             languages i work with are:
           </section>
-          <Grid
-            container
-            spacing={1}
-            sx={{ mt: "1em", mb: "2em", color: Theme.palette.secondary.main }}
-          >
-            {skills.map((skill, index) => (
-              <Grid item xs={4} key={index}>
-                <ListItem sx={{ display: "flex", alignItems: "center" }}>
-                  <img
-                    src={rightArrow}
-                    alt="rightArrow"
-                    style={{ width: "10px", mr: "5px" }}
-                  />
-                  {skill}
-                </ListItem>
-              </Grid>
-            ))}
-          </Grid>
         </Grid>
         <Grid
           item
           xs={12}
           md={6}
           sx={{
-            mt: {
-              xs: "1em",
-              sm: "5em",
-              md: "10em",
-              lg: "8em",
-            },
             display: "flex",
-            alignItems: "flex-start",
-            marginTop: { xs: "1em", md: "2.5em" },
+            alignItems: "center",
             justifyContent: "center",
+            pt: { xs: "2em", sm: "4em", md: "4em", lg: "3em" },
           }}
         >
           <div
@@ -176,9 +149,7 @@ export default function About() {
                 left: "4em",
                 width: "60%",
                 height: "99%",
-                border: "4px solid #17A3A3 ",
-                transition: "border-color 0.3s ease-in-out",
-                zIndex: -1,
+                border: "4px solid #17A3A3",
               }}
             />
             <img
@@ -187,37 +158,25 @@ export default function About() {
               style={{
                 width: "60%",
                 height: "auto",
-                mb: {
-                  xs: "2em",
-                  sm: "3em",
-                  md: "10em",
-                  lg: "12em",
-                },
-                filter: "grayscale(100%)",
+                filter: "grayscale(90%)",
               }}
             />
           </div>
         </Grid>
+        <Skeleton
+          variant="text"
+          animation="wave"
+          width="30%"
+          sx={{
+            fontSize: "2px",
+            backgroundColor: "#17A3A3",
+            position: "absolute",
+            bottom: { xs: "-4rem", sm: "-4rem", md: "-5rem", lg: "-1rem" },
+            left: { xs: "50%", md: "55%" },
+            transform: "translateX(-50%)",
+          }}
+        />
       </Grid>
     </ThemeProvider>
   );
 }
-const skills = [
-  "MUI",
-  "Bootstrap",
-  "JavaScript",
-  "React",
-  "Node.js",
-  "PostgreSQL",
-  "Git",
-  "Docker",
-  "AWS S3",
-  "AWS EC2",
-  "AWS RDS",
-  "DynamoDB",
-  "API Gateway",
-  "Lambda",
-  "Cloudfront",
-
-  "Linux",
-];

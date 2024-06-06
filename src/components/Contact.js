@@ -33,12 +33,12 @@ export default function Contact() {
             marginBottom: 0,
           }}
         >
-          03.Let's Chat!
+          Let's Chat!
         </h4>
         <h2
           style={{
             fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
-            color: Theme.palette.secondary.light,
+            color: "#555d69",
             whiteSpace: "nowrap",
           }}
         >

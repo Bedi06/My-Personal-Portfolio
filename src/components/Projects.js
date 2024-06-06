@@ -1,276 +1,180 @@
 import React from "react";
-import { styled } from "@mui/system";
-import { Grid, Typography, Box, List, ListItem, Link } from "@mui/material";
-import { Theme } from "../theme.js";
-import { ThemeProvider } from "@mui/material/styles";
-import { LaunchOutlined } from "@mui/icons-material";
+import Link from "@mui/material/Link";
 import githubIcon from "./assets/githubIcon.svg";
-import projectData from "./projectsData.json";
-import ImageSlider from "./ImageSlider.js";
-import { Skeleton } from "@mui/material";
+import projectData from "../components/projectsData.json";
+import { LaunchOutlined } from "@mui/icons-material";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { Typography } from "@mui/material";
 
-const ProjectContainer = styled(Box)(({ theme }) => ({
-  width: "100%",
-}));
+const Projects = () => {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
-const Project = styled(Grid)(({ theme }) => ({
-  margin: "30px",
-  display: "grid",
-  gridGap: "10px",
-  gridTemplateColumns: "repeat(12, 1fr)",
-  gridTemplateRows: "repeat(6, 1fr)",
-  alignItems: "center",
-  [theme.breakpoints.down("md")]: {
-    gridTemplateColumns: "repeat(2, 1fr)",
-    gridTemplateRows: "repeat(1, 1fr)",
-    marginLeft: "3em",
-    margin: 0,
-    gap: "0.5em",
-  },
-}));
-
-const ProjectContent = styled(Box)(({ theme }) => ({
-  gridColumn: "1 / -1",
-  gridRow: "1 / -1",
-  padding: "0 25px",
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  [theme.breakpoints.up("md")]: {
-    gridColumn: "1/7 ",
-  },
-  [theme.breakpoints.down("md")]: {
-    gridColumn: "1/1",
-    gridRow: "1 / 1",
-    padding: "0",
-  },
-  position: "relative",
-}));
-
-const ProjectLabel = styled("div")(({ theme }) => ({
-  color: "#64ffda",
-  fontFamily: "monospace",
-  [theme.breakpoints.down("md")]: {
-    display: "flex",
-    alignText: "left",
-    marginTop: "7em",
-    marginLeft: "1.5em",
-  },
-  [theme.breakpoints.down("sm")]: {
-    display: "flex",
-    alignText: "left",
-  },
-}));
-
-const ProjectTitle = styled("h4")(({ theme }) => ({
-  fontSize: "1.2rem",
-  fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
-  margin: "10px 0 30px",
-  color: "#eee",
-  [theme.breakpoints.down("md")]: {
-    display: "flex",
-    alignText: "Left",
-    marginTop: "1em",
-    marginLeft: "1em",
-    marginBottom: 0,
-  },
-}));
-
-const ProjectDetails = styled(Box)(({ theme }) => ({
-  fontSize: "15px",
-  lineHeight: 1.5,
-  color: "#aaa",
-  "& p": {
-    padding: "20px 25px",
-    backgroundColor: "#112240",
-  },
-  [theme.breakpoints.down("md")]: {
-    "& p": {
-      backgroundColor: "transparent",
-      marginTop: "0.5em",
-    },
-  },
-  [theme.breakpoints.down("sm")]: {
-    "& p": {
-      fontSize: "10px",
-    },
-  },
-  "& ul": {
-    display: "flex",
-    marginTop: "20px",
-    [theme.breakpoints.down("sm")]: {
-      marginTop: "4em",
-    },
-    "& li": {
-      margin: 0,
-      color: "#aaa",
-      fontFamily: "monospace",
-      [theme.breakpoints.down("sm")]: {
-        "& li": {
-          display: "grid",
-          gridTemplateColumns: "repeat(2, 1fr)",
-        },
-      },
-    },
-  },
-}));
-
-const ProjectIcons = styled(Box)(({ theme }) => ({
-  gridColumn: "7 / -1",
-  display: "flex",
-  justifyContent: "flex-end",
-  alignItems: "center",
-  [theme.breakpoints.down("md")]: {
-    gridColumn: "1 / 2",
-    justifyContent: "flex-end",
-  },
-  [theme.breakpoints.down("sm")]: {
-    justifyContent: "flex-end",
-  },
-}));
-
-const IconWrapper = styled(Box)({
-  marginRight: "10px",
-  cursor: "pointer",
-});
-
-const ProjectImage = styled(Box)(({ theme }) => ({
-  zIndex: -1,
-  gridColumn: "6 / -1",
-  gridRow: "1 / -1",
-  backgroundColor: "transparent",
-
-  [theme.breakpoints.down("md")]: {
-    gridColumn: "1/2",
-    gridRow: "1 / 1",
-    opacity: 0.3,
-    width: "150%",
-  },
-  [theme.breakpoints.down("sm")]: {
-    alignItems: "center",
-    opacity: 0.3,
-    width: "140%",
-  },
-
-  [theme.breakpoints.down("xs")]: {
-    marginRight: "10px",
-    width: "120%",
-  },
-}));
-export default function Projects() {
   return (
-    <ThemeProvider theme={Theme}>
-      <ProjectContainer id="projects">
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "left",
-            margin: 0,
-            padding: 0,
-          }}
-        >
-          <Typography
-            variant="h2"
-            fontSize={"2em"}
+    <div
+      id="projects"
+      style={{
+        backgroundColor: "white",
+        width: "100%",
+        height: "100%",
+        padding: 1,
+      }}
+    >
+      <Typography
+        variant="h3"
+        style={{
+          textAlign: "center",
+          marginTop: "1em",
+          fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
+          fontSize: { xs: "25px", sm: "30px", md: "30px", lg: "35px" },
+          fontWeight: 600,
+          color: "black",
+        }}
+      >
+        Feature Projects
+      </Typography>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: "1.5em",
+          marginBottom: "1.5em",
+          backgroundColor: "white",
+          color: "black",
+          flexWrap: "wrap",
+        }}
+      >
+        {projectData.map((project, index) => (
+          <React.Fragment key={index}>
+            <Link
+              underline="none"
+              style={{
+                margin: "0.5em",
+              }}
+              href={`#project-${index}`}
+            >
+              {project.title}
+            </Link>
+            {index < projectData.length - 1 && (
+              <span style={{ margin: "0.5em" }}>|</span>
+            )}
+          </React.Fragment>
+        ))}
+      </div>
+
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr",
+          gap: "2em",
+        }}
+      >
+        {projectData.map((project, index) => (
+          <div
+            key={index}
+            id={`project-${index}`}
             style={{
-              fontWeight: "600",
-              fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
-              color: Theme.palette.secondary.light,
-              marginTop: "2em",
-              marginLeft: "1.5em",
+              display: "flex",
+              flexDirection: isSmallScreen
+                ? "column"
+                : index % 2 === 0
+                ? "row-reverse"
+                : "row",
+              alignItems: "center",
+              paddingBottom: "5em",
             }}
           >
-            <span
+            <Link
+              underline="none"
+              href={project.github}
               style={{
-                color: Theme.palette.primary.main,
-                fontSize: "25px",
-                fontFamily: "SF Mono,Fira Code,Fira Mono,Roboto Mono,monospace",
+                flex: "1",
+                marginRight: isSmallScreen ? 0 : index % 2 === 0 ? 0 : "1em",
+                marginLeft: isSmallScreen ? 0 : index % 2 === 0 ? "1em" : 0,
+                order: isSmallScreen ? -1 : 0,
               }}
             >
-              02.
-            </span>
-            Projects
-            <Skeleton
-              variant="text"
-              animation="wave"
-              display="inline"
-              sx={{
-                fontSize: "1px",
-                padding: "1px",
-                backgroundColor: Theme.palette.secondary.light,
-              }}
-            />
-          </Typography>
-        </div>
-        <Grid container spacing={0}>
-          {projectData.map((project, index) => (
-            <Project key={index}>
-              <ProjectContent>
-                <ProjectLabel>{project.name}</ProjectLabel>
-                <ProjectTitle>{project.title}</ProjectTitle>
-                <ProjectDetails>
-                  <Typography
-                    variant="body2"
-                    component="p"
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    {project.description}
-                  </Typography>
-                  <List
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-
-                      marginTop: "20px",
-                    }}
-                  >
-                    {project.details.map((detail, index) => (
-                      <ListItem key={index}>{detail}</ListItem>
-                    ))}
-                  </List>
-                </ProjectDetails>
-              </ProjectContent>
-
-              <ProjectImage>
-                <ImageSlider images={project.image} />
-              </ProjectImage>
-
-              <ProjectIcons>
-                <IconWrapper>
-                  <Link
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src={githubIcon}
-                      alt="GitHub"
-                      sx={{ color: Theme.palette.primary.main }}
-                    />
-                  </Link>
-                </IconWrapper>
-                <IconWrapper>
-                  <Link
+              <img
+                src={project.image[0]}
+                alt={project.title}
+                style={{ width: "100%" }}
+              />
+            </Link>
+            <div style={{ flex: "1", textAlign: "left", padding: "1em" }}>
+              <Typography
+                variant="h5"
+                style={{
+                  fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
+                  fontSize: { xs: "20px", sm: "24px", md: "28px" },
+                  fontWeight: 600,
+                  color: "black",
+                }}
+              >
+                {project.title}
+              </Typography>
+              <Typography
+                style={{
+                  fontSize: { xs: "14px", sm: "15px", md: "16px" },
+                  color: "#555d69",
+                  marginTop: "1em",
+                }}
+              >
+                {project.description}
+              </Typography>
+              <div style={{ marginTop: "1em" }}>
+                {project.details.map((detail, index) => (
+                  <span
+                    key={index}
                     style={{
-                      color: Theme.palette.primary.main,
+                      color: "#17A3A3",
+                      display: "inline-block",
+                      margin: "0.5em 0.5em 0 0",
+                      padding: "0.3em",
+                      border: "2px solid",
+                      borderRadius: "5px",
+                      borderColor: "#17A3A3",
+                      fontSize: {
+                        xs: "12px",
+                        sm: "14px",
+                        md: "16px",
+                        lg: "20px",
+                      },
                     }}
-                    href={project.liveview}
-                    target="_blank"
-                    rel="noopener noreferrer"
                   >
-                    <LaunchOutlined />
-                  </Link>
-                </IconWrapper>
-              </ProjectIcons>
-            </Project>
-          ))}
-        </Grid>
-      </ProjectContainer>
-    </ThemeProvider>
+                    {detail}
+                  </span>
+                ))}
+              </div>
+              <div style={{ marginTop: "1.5em" }}>
+                <Link
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={githubIcon} alt="GitHub" />
+                </Link>
+                <Link
+                  style={{
+                    color: "black",
+                  }}
+                  href={project.liveview}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LaunchOutlined
+                    sx={{ paddingLeft: "0.5em", fontSize: "1.8em" }}
+                  />
+                </Link>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
-}
+};
+
+export default Projects;
