@@ -53,7 +53,7 @@ export default function Home() {
               variant="h3"
               style={{
                 width: { xs: "80%", sm: "80%" },
-                color: "rgb(123 123 123)",
+                color: "black",
                 fontSize: "clamp(40px, 8vw, 80px)",
                 fontWeight: "600",
                 marginTop: "5px",

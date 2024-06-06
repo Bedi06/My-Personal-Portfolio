@@ -123,8 +123,7 @@ export default function About() {
             development, and database technologies, seeking opportunities to
             dwellve deeper into the field. Throughout my professional journey,
             I've cultivated a strong foundation in developing, testing, and
-            debugging high-performance web applications. Some of the tools and
-            languages i work with are:
+            debugging high-performance web applications.
           </Typography>
         </Grid>
         <Grid
