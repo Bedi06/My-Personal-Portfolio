@@ -7,7 +7,7 @@ const SkillsSection = () => (
     <Container>
       <Typography
         variant="h4"
-        sx={{ mb: 4, fontWeight: "bold", color: "#6d7e8f" }}
+        sx={{ mb: 4, fontWeight: "bold", color: "rgb(23, 163, 163)" }}
       >
         SKILLS
       </Typography>
