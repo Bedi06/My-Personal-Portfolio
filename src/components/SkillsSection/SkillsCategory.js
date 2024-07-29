@@ -3,7 +3,7 @@ import SkillItem from "./SkillItem";
 
 const SkillCategory = ({ category, items }) => (
   <Box sx={{ mb: 4 }}>
-    <Typography variant="h6" sx={{ mb: 2, fontWeight: "bold" }}>
+    <Typography variant="h6" sx={{ mb: 2 }}>
       {category}
     </Typography>
     {items.map((skill, index) => (

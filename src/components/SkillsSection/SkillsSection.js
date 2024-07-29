@@ -7,9 +7,9 @@ const SkillsSection = () => (
     <Container>
       <Typography
         variant="h4"
-        sx={{ mb: 4, fontWeight: "bold", color: "rgb(23, 163, 163)" }}
+        sx={{ mb: 4, fontWeight: "", color: "rgb(23, 163, 163)" }}
       >
-        SKILLS
+        Tech Skills
       </Typography>
       <Grid container spacing={4}>
         {skills.map((category, index) => (

@@ -2,6 +2,7 @@ import { Box, Grid } from "@mui/material";
 import { Theme } from "../theme.js";
 import { ThemeProvider } from "@mui/material/styles";
 import Button from "@mui/material/Button";
+import { Typography } from "@mui/material";
 
 export default function Contact() {
   const handleSayHelloClick = () => {
@@ -25,7 +26,8 @@ export default function Contact() {
           justifyContent: "center",
         }}
       >
-        <h4
+        <Typography
+          variant="h4"
           style={{
             color: Theme.palette.primary.main,
             fontSize: "15px",
@@ -34,30 +36,36 @@ export default function Contact() {
           }}
         >
           Let's Chat!
-        </h4>
-        <h2
+        </Typography>
+        <Typography
+          variant="h4"
           style={{
-            fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
+            fontSize: "25px",
+            fontWeight: "600",
+            fontFamily: "SF Mono,Fira Code,Fira Mono,Roboto Mono,monospace",
             color: "#555d69",
+            lineHeight: "1.5",
             whiteSpace: "nowrap",
           }}
         >
           Get in touch
-        </h2>
-        <section
+        </Typography>
+        <Typography
+          variant="p"
           style={{
-            color: Theme.palette.secondary.main,
+            color: "#555d69",
             fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
             paddingBottom: "1em",
             textAlign: "center",
             width: "80%",
-            maxWidth: { xs: "60%", md: "40%", lg: "40%" },
+            Width: { xs: "60%", md: "30%", lg: "30%" },
           }}
         >
           Whether you have a project in mind, questions about my projects, or
-          just want to chat tech, I'm always eager to engage with fellow
-          enthusiasts like you. Drop me a line and let's start the conversation!
-        </section>
+          just want to chat tech, <br></br>I'm always eager to engage with
+          fellow enthusiasts like you. Drop me a line and let's start the
+          conversation!
+        </Typography>
         <Grid container justifyContent="center">
           <Button
             variant="outlined"

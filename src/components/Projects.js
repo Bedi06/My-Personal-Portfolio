@@ -53,6 +53,8 @@ const Projects = () => {
               underline="none"
               style={{
                 margin: "0.5em",
+                fontFamily: "monospace",
+                fontSize: "15px",
               }}
               href={`#project-${index}`}
             >
@@ -109,13 +111,13 @@ const Projects = () => {
                 style={{
                   fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
                   fontSize: { xs: "20px", sm: "24px", md: "28px" },
-                  fontWeight: 600,
                   color: "black",
                 }}
               >
                 {project.title}
               </Typography>
               <Typography
+                variant="body1"
                 style={{
                   fontSize: { xs: "14px", sm: "15px", md: "16px" },
                   color: "#555d69",
@@ -136,6 +138,7 @@ const Projects = () => {
                       border: "2px solid",
                       borderRadius: "5px",
                       borderColor: "#17A3A3",
+                      fontFamily: "monospace",
                       fontSize: {
                         xs: "12px",
                         sm: "14px",

@@ -74,7 +74,7 @@ export default function Home() {
               }}
             >
               <Typography
-                variant="p"
+                variant="body1"
                 style={{
                   paddingTop: "1em",
                   paddingBottom: "4em",

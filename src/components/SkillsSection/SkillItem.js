@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 
 const SkillItem = ({ skill }) => (
-  <Typography variant="body2" sx={{ mb: 1 }}>
+  <Typography variant="body1" sx={{ mb: 1 }}>
     {skill}
   </Typography>
 );
