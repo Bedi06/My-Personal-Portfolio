@@ -26,13 +26,15 @@ const Projects = () => {
         style={{
           textAlign: "center",
           marginTop: "1em",
-          fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
-          fontSize: { xs: "25px", sm: "30px", md: "30px", lg: "35px" },
-          fontWeight: 600,
-          color: "black",
+          fontWeight: "600",
+          fontFamily: "SF Mono,Fira Code,Fira Mono,Roboto Mono,monospace",
+          color: "#555d69",
+          lineHeight: "1.5",
+          whiteSpace: "nowrap",
+          fontSize: { xs: "25px", sm: "30px", md: "20px", lg: "25px" },
         }}
       >
-        Feature Projects
+        Featured Projects
       </Typography>
       <div
         style={{

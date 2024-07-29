@@ -44,17 +44,18 @@ export default function About() {
               style={{
                 fontWeight: "600",
                 fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
-                color: "black",
                 marginRight: "100px",
+                color: "#555d69",
+
                 whiteSpace: "nowrap",
               }}
             >
               <span
                 style={{
-                  color: "rgb(80 82 91)",
-                  fontSize: "25px",
+                  fontWeight: "600",
                   fontFamily:
                     "SF Mono,Fira Code,Fira Mono,Roboto Mono,monospace",
+                  color: "#555d69",
                 }}
               ></span>
               About me
