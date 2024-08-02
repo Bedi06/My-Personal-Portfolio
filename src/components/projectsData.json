@@ -12,7 +12,7 @@
     "description": " This project aims to develop a unique, customisable avatar generator and sharing system for Code Your Future members, allowing users to create and easily recognize CYF-branded avatars across various platforms while ensuring accessibility and high-performance standards.",
     "details": ["TypeScript", "React", "Tailwind", "SCSS"],
     "image": ["https://bedis-portfolio.s3.eu-west-2.amazonaws.com/2.png"],
-    "github": "https://github.com/Bedi06/Avanart.github.io",
+    "github": "https://github.com/Bedi06/Avanart",
     "liveview": "https://avanart.netlify.app/"
   },
   {
