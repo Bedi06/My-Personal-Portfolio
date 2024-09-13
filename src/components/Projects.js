@@ -108,16 +108,23 @@ const Projects = () => {
               />
             </Link>
             <div style={{ flex: "1", textAlign: "left", padding: "1em" }}>
-              <Typography
-                variant="h5"
-                style={{
-                  fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
-                  fontSize: { xs: "20px", sm: "24px", md: "28px" },
-                  color: "black",
-                }}
+              <Link
+                href={project.liveview}
+                target="_blank"
+                rel="noopener noreferrer"
+                underline="none"
               >
-                {project.title}
-              </Typography>
+                <Typography
+                  variant="h5"
+                  style={{
+                    fontFamily: "Calibre,Inter,San Francisco,SF Pro Text",
+                    fontSize: { xs: "20px", sm: "24px", md: "28px" },
+                    color: "black",
+                  }}
+                >
+                  {project.title}
+                </Typography>
+              </Link>
               <Typography
                 variant="body1"
                 style={{
