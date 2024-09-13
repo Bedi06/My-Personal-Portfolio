@@ -1,7 +1,7 @@
 [
   {
     "title": "The Big Mouth",
-    "description": "A Video Streaming platform build for The Big House Theater Company. The platform  offers users the ability to stream their favorite shows, complemented by an innovative x-ray feature providing real-time details about actors and their roles. The VideoHub page enables seamless video uploads directly from user devices using S3 presigned URLs, with administrators empowered to approve, review, and delete content.",
+    "description": "A video streaming platform build for The Big House Theatre Company. The platform  offers users the ability to stream their favorite shows, complemented by an innovative x-ray feature providing real-time details about actors and their roles. The VideoHub page enables seamless video uploads directly from user devices using S3 presigned URLs, with administrators empowered to approve, review, and delete content.",
     "details": ["React", "MUI", "Auth0", "AWS "],
     "image": ["https://bedis-portfolio.s3.eu-west-2.amazonaws.com/1.png"],
     "github": "https://github.com/JoeWeate/thebigmouth",
@@ -16,8 +16,8 @@
     "liveview": "https://avanart.netlify.app/"
   },
   {
-    "title": "Video Recommandations",
-    "description": "A user-friendly platform that lets you securely save, rate, and organize your favorite videos. With advanced search and filtering options, along with seamless integration of Amazon EC2, RDS, PostgreSQL, React, and Bootstrap technologies, managing your video collection has never been easier.",
+    "title": "Video Recommendations",
+    "description": "A user-friendly platform that lets you securely save, rate, and organise your favourite videos. With advanced search and filtering options and seamless integration of Amazon EC2, RDS, PostgreSQL, React, and Bootstrap technologies, managing your video collection has never been easier.",
     "details": ["React", "EC2", "PSQL", "RDS", "Terraform", "Github Actions"],
     "image": ["https://bedis-portfolio.s3.eu-west-2.amazonaws.com/3.png"],
     "github": "https://github.com/Bedi06/Video-Recommandations-App",

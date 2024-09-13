@@ -86,7 +86,7 @@ export default function About() {
               lineHeight: 1.3,
             }}
           >
-            Hi , my name is Bedi and i enjoy designing and building web
+            Hi, my name is Bedi, and I enjoy designing and building web
             applications.
           </Typography>{" "}
           <Typography
